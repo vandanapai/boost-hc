@@ -1,0 +1,35 @@
+@import "helpers/variables";
+@import "helpers/mixins";
+ 
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+ 
+    @include border-box;
+ 
+    }
+
+.wrapper,
+.row {
+    @extend %clearfix;
+}
+
+.wrapper {
+    width: 95%;
+    max-width: $grid-max-width; 
+    }
+
+// media queries
+
+@media #{$breakpoint-medium} {
+
+// columns
+
+@for i from 1 through 12 {
+
+	.column-#($i) {
+		width: 100% / 12 * $i;
+	}
+}
