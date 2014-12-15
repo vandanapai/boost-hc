@@ -1,0 +1,45 @@
+$yale-blue: "003354";
+$sky-blue: "91bed4";
+$orange: "ed8222";
+$light-grey: "666666"; // for text on dark-grey background
+$dark-grey: "303030"; // container background color
+$darkest-grey: "202020"; // for header text on dark-grey background
+$blue-grey: "363a3d"; // body color
+$white: "ffffff";
+
+/*      NAVIGATION LINKS      */
+
+$color-link-light: $white;
+$color-link-dark: $orange;
+
+/*      SUBNAVIGATION LINKS       */
+
+$color-link-subnav-light: $sky-blue;
+$color-link-subnav-dark: $yale-blue;
+
+/*       CONTAINER BACKGROUNDS       */
+
+$color-container-light: $white;
+$color-container-dark: $yale-blue;
+$color-container-darkest: $dark-grey;
+
+/*       TYPOGRAPHY       */
+
+// HERO
+
+$color-hero-title: $white;
+
+// HEADINGS
+
+$color-heading-light: $white;
+$color-heading-dark: $orange;
+$color-heading-darkest: $darkest-grey;
+
+// BODY TEXT
+
+$color-text-dark: $light-grey;
+$color-text-darkest: $blue-grey;
+$color-text-light: $sky-blue;
+$color-text-lightest: $white;
+
+// hello there

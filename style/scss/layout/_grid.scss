@@ -23,13 +23,12 @@
 
 // media queries
 
-@media #{$breakpoint-medium} {
 
 // columns
 
-@for i from 1 through 12 {
+// @for $i from 1 through 12 {
 
-	.column-#($i) {
-		width: 100% / 12 * $i;
-	}
-}
+// 	.column-(#{$i}) {
+// 		width: 100% / 12 * $i;
+// 	}
+// }
