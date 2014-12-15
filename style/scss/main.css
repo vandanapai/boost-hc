@@ -25,7 +25,7 @@ body {
 
 /*      TITLE 		*/
 h1 {
-  font-family: "Droid Serif", Georgia, serif;
+  font-family: "Droid Serif", Georgia, Times, serif;
   color: "ffffff";
   font-size: 3em;
   line-height: 3.75em; }
