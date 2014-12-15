@@ -1,48 +1,45 @@
-@import "colors";
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Droid+Serif:400,700);
 
-$font-stack-serif: "Droid Serif", Georgia, Times, serif;
-$font-stack-sans-serif: "Lato", Helvetica, Tahoma, Verdana, sans-serif;
+$lato: "Lato";
+$droid-serif: "Droid Serif";
 
-
+$font-stack-serif: $droid-serif, Georgia, Times, serif;
+$font-stack-sans-serif: $lato, Helvetica, Tahoma, Verdana, sans-serif;
 
 /* 		BODY	*/
 
 body {
-	font-size: 1.5em;
+    font-size: 1em;
 }
-
 
 /*      TITLE 		*/
 
 h1 {
-	font-family: $font-stack-serif;
-	color: $color-heading-light;
-	font-size: 3em;
-	line-height: 3.75em;
+    font-family: $font-stack-serif;
+    color: $color-heading-light;
+    font-size: 3em;
+    font-weight: normal;
 }
 
 /* 		HEADINGS		*/
 
 h2 {
-	font-family: $font-stack-sans-serif;
-	font-size: 3em;
-
-	.light {
-		color: $color-heading-light;
-	}
-
-	.dark {
-		color: $color-heading-dark;
-	}
-
+    font-family: $font-stack-sans-serif;
+    font-size: 3em;
+    .light {
+        color: $color-heading-light;
+    }
+    .dark {
+        color: $color-heading-dark;
+    }
 }
 
 h3 {
-	font-family: $font-stack-sans-serif;
-	font-size: 2.25em;
+    font-family: $font-stack-sans-serif;
+    font-size: 2.25em;
 }
 
 h4 {
-	font-family: $font-stack-sans-serif;
-	font-size: 1.5em;
+    font-family: $font-stack-sans-serif;
+    font-size: 1.5em;
 }

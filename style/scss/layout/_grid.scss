@@ -1,25 +1,24 @@
-@import "helpers/variables";
-@import "helpers/mixins";
+// @import "helpers/mixins";
  
-*,
-*:after,
-*:before {
-    margin: 0;
-    padding: 0;
+// *,
+// *:after,
+// *:before {
+//     margin: 0;
+//     padding: 0;
  
-    @include border-box;
+//     @include border-box;
  
-    }
+//     }
 
-.wrapper,
-.row {
-    @extend %clearfix;
-}
+// .wrapper,
+// .row {
+//     @extend %clearfix;
+// }
 
-.wrapper {
-    width: 95%;
-    max-width: $grid-max-width; 
-    }
+// .wrapper {
+//     width: 95%;
+//     max-width: $grid-max-width; 
+//     }
 
 // media queries
 
