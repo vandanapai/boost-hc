@@ -1,0 +1,13 @@
+@import "helpers/colors";
+
+.light-container {
+	background-color: $color-container-light;
+}
+
+.dark-container {
+	background-color: $color-container-dark;
+}
+
+.darkest-container {
+	background-color: $color-container-darkest;
+}

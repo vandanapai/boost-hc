@@ -7,8 +7,11 @@
 @import "helpers/typography";
 
 // import Layout
-// @import "layout/grid";
+@import "layout/containers";
+@import "layout/grid";
+@import "layout/footer";
 
 // import Components
 
+@import "components/images";
 @import "components/navigation";

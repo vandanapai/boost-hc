@@ -6,17 +6,21 @@ $droid-serif: "Droid Serif";
 $font-stack-serif: $droid-serif, Georgia, Times, serif;
 $font-stack-sans-serif: $lato, Helvetica, Tahoma, Verdana, sans-serif;
 
+
+
 /* 		BODY	*/
 
 body {
     font-size: 1em;
+    font-family: $font-stack-serif;
+    color: $blue-grey;
 }
 
 /*      TITLE 		*/
 
 h1 {
     font-family: $font-stack-serif;
-    color: $color-heading-light;
+    color: $color-hero-title;
     font-size: 3em;
     font-weight: normal;
 }
@@ -25,21 +29,38 @@ h1 {
 
 h2 {
     font-family: $font-stack-sans-serif;
-    font-size: 3em;
-    .light {
+    font-size: 2.75em;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: .15em;
+    &.light {
         color: $color-heading-light;
     }
-    .dark {
+    &.dark {
         color: $color-heading-dark;
     }
 }
 
 h3 {
     font-family: $font-stack-sans-serif;
-    font-size: 2.25em;
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: .1em;
+
+    &.light {
+        color: $color-heading-light;
+    }
+    &.dark {
+        color: $color-heading-dark;
+    }
 }
 
 h4 {
     font-family: $font-stack-sans-serif;
     font-size: 1.5em;
+}
+
+.centered {
+    text-align: center;
 }

@@ -1,7 +1,26 @@
-nav li {
-	font-family: $font-stack-sans-serif;
-	font-weight: 700;
-	color: $color-link-light;
-	text-decoration: none;
-	text-transform: uppercase;
+nav {
+	background-color: blue;
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	padding: 2em;
+
+	ul {
+		float: right;
+
+		li {
+			font-size: 1.25em;
+			font-family: $font-stack-sans-serif;
+			font-weight: 300;
+			color: $color-link-light;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline;
+			list-style-type: none;
+			float: left;
+			margin-right: 4em;
+		}
+	}
 }

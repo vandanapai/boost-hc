@@ -1,6 +1,19 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Droid+Serif:400,700);
 body {
-  background-color: black; }
+  background-color: #fff;
+  margin: 0 auto; }
+
+.wrapper,
+.row {
+  *zoom: 1; }
+  .wrapper:before,
+  .row:before, .wrapper:after,
+  .row:after {
+    content: " ";
+    display: table; }
+  .wrapper:after,
+  .row:after {
+    clear: both; }
 
 /*      NAVIGATION LINKS      */
 /*      SUBNAVIGATION LINKS       */
@@ -8,7 +21,9 @@ body {
 /*       TYPOGRAPHY       */
 /* 		BODY	*/
 body {
-  font-size: 1em; }
+  font-size: 1em;
+  font-family: "Droid Serif", Georgia, Times, serif;
+  color: #363a3d; }
 
 /*      TITLE 		*/
 h1 {
@@ -20,25 +35,151 @@ h1 {
 /* 		HEADINGS		*/
 h2 {
   font-family: "Lato", Helvetica, Tahoma, Verdana, sans-serif;
-  font-size: 3em; }
-  h2 .light {
+  font-size: 2.75em;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: .15em; }
+  h2.light {
     color: #ffffff; }
-  h2 .dark {
+  h2.dark {
     color: #ed8222; }
 
 h3 {
   font-family: "Lato", Helvetica, Tahoma, Verdana, sans-serif;
-  font-size: 2.25em; }
+  font-size: 2em;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: .1em; }
+  h3.light {
+    color: #ffffff; }
+  h3.dark {
+    color: #ed8222; }
 
 h4 {
   font-family: "Lato", Helvetica, Tahoma, Verdana, sans-serif;
   font-size: 1.5em; }
 
-nav li {
-  font-family: "Lato", Helvetica, Tahoma, Verdana, sans-serif;
-  font-weight: 700;
-  color: #ffffff;
-  text-decoration: none;
-  text-transform: uppercase; }
+.centered {
+  text-align: center; }
+
+/*      NAVIGATION LINKS      */
+/*      SUBNAVIGATION LINKS       */
+/*       CONTAINER BACKGROUNDS       */
+/*       TYPOGRAPHY       */
+.light-container {
+  background-color: #ffffff; }
+
+.dark-container {
+  background-color: #003354; }
+
+.darkest-container {
+  background-color: #303030; }
+
+.wrapper,
+.row {
+  *zoom: 1; }
+  .wrapper:before,
+  .row:before, .wrapper:after,
+  .row:after {
+    content: " ";
+    display: table; }
+  .wrapper:after,
+  .row:after {
+    clear: both; }
+
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+img {
+  width: auto;
+  max-width: 100%;
+  height: auto !important; }
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  padding: 4em; }
+
+[class*='column-'] {
+  float: left;
+  padding: 1em;
+  width: 100%;
+  min-height: 1px; }
+
+@media only screen and (min-width: 40em) {
+  .wrapper {
+    width: 95%;
+    max-width: 65em; }
+
+  .column-1 {
+    width: 8.33333%; }
+
+  .column-2 {
+    width: 16.66667%; }
+
+  .column-3 {
+    width: 25%; }
+
+  .column-4 {
+    width: 33.33333%; }
+
+  .column-5 {
+    width: 41.66667%; }
+
+  .column-6 {
+    width: 50%; }
+
+  .column-7 {
+    width: 58.33333%; }
+
+  .column-8 {
+    width: 66.66667%; }
+
+  .column-9 {
+    width: 75%; }
+
+  .column-10 {
+    width: 83.33333%; }
+
+  .column-11 {
+    width: 91.66667%; }
+
+  .column-12 {
+    width: 100%; } }
+footer {
+  background-color: #303030; }
+
+/*      HERO IMAGES     */
+.hero-img {
+  background-color: black;
+  background-size: cover; }
+
+nav {
+  background-color: blue;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  padding: 2em; }
+  nav ul {
+    float: right; }
+    nav ul li {
+      font-size: 1.25em;
+      font-family: "Lato", Helvetica, Tahoma, Verdana, sans-serif;
+      font-weight: 300;
+      color: #ffffff;
+      text-decoration: none;
+      text-transform: uppercase;
+      display: inline;
+      list-style-type: none;
+      float: left;
+      margin-right: 4em; }
 
 /*# sourceMappingURL=main.css.map */
