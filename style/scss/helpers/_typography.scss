@@ -25,15 +25,20 @@ h1 {
     font-weight: normal;
 }
 
+
+
 /* 		HEADINGS		*/
 
 h2 {
     font-family: $font-stack-sans-serif;
     font-size: 2.75em;
     text-transform: uppercase;
-    font-weight: 900;
-    letter-spacing: .15em;
+    font-weight: 700;
+    letter-spacing: .1em;
     padding-bottom: 1em;
+    &.lightest {
+        color: $color-heading-lightest;
+    }
     &.light {
         color: $color-heading-light;
     }
@@ -48,6 +53,7 @@ h3 {
     text-transform: uppercase;
     font-weight: 900;
     letter-spacing: .1em;
+    padding: 1em;
 
     &.light {
         color: $color-heading-light;
@@ -67,9 +73,11 @@ h4 {
 }
 
 p {
-    padding-bottom: 2em;
+    font-size: 1.15em;
+    line-height: 1.5em;
     &.large {
         font-size: 2em;
+        padding-bottom: 2em;
     }
     &.lighest {
         color: $color-text-lightest;

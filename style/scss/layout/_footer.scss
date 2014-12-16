@@ -5,10 +5,12 @@ footer {
 	font-family: $font-stack-sans-serif;
 	text-transform: uppercase;
 	font-weight: 300;
+	clear: both;
 
 	p {
 		font-size: .9em;
 		padding: 0;
+		float: left;
 	}
 
 	ul {

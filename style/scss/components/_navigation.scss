@@ -1,5 +1,5 @@
 header {
-	background-color: blue;
+	background-color: transparent;
 	position: fixed;
 	width: 100%;
 	left: 0;
@@ -17,20 +17,33 @@ header {
 			float: right;
 
 			li {
-				font-size: 1.25em;
-				font-family: $font-stack-sans-serif;
-				font-weight: 300;
-				color: $color-link-light;
-				text-decoration: none;
-				text-transform: uppercase;
 				display: inline;
 				list-style-type: none;
-				float: left;
-				margin-right: 4em;
+
+				a {
+
+					font-size: 1.2em;
+					font-family: $font-stack-sans-serif;
+					font-weight: 500;
+					color: $color-link-light;
+					text-decoration: none;
+					text-transform: uppercase;
+					float: left;
+					margin-right: 3em;
+					transition: all .2s ease-in-out;
+
+					&:hover, &:active {
+						color: $color-link-dark;
+						border-bottom: 2px solid;
+						padding-bottom: 4px;
+					}
+
+				}
 			}
 		}
 	}
 }
+
 
 button {
 	padding: 1em;

@@ -37,24 +37,27 @@ h2 {
   font-family: "Lato", Helvetica, Tahoma, Verdana, sans-serif;
   font-size: 2.75em;
   text-transform: uppercase;
-  font-weight: 900;
-  letter-spacing: .15em;
+  font-weight: 700;
+  letter-spacing: .1em;
   padding-bottom: 1em; }
-  h2.light {
+  h2.lightest {
     color: #ffffff; }
-  h2.dark {
+  h2.light {
     color: #ed8222; }
+  h2.dark {
+    color: #003354; }
 
 h3 {
   font-family: "Lato", Helvetica, Tahoma, Verdana, sans-serif;
   font-size: 2em;
   text-transform: uppercase;
   font-weight: 900;
-  letter-spacing: .1em; }
+  letter-spacing: .1em;
+  padding: 1em; }
   h3.light {
-    color: #ffffff; }
-  h3.dark {
     color: #ed8222; }
+  h3.dark {
+    color: #003354; }
 
 h4 {
   font-family: "Lato", Helvetica, Tahoma, Verdana, sans-serif;
@@ -64,9 +67,11 @@ h4 {
   text-align: center; }
 
 p {
-  padding-bottom: 2em; }
+  font-size: 1.15em;
+  line-height: 1.5em; }
   p.large {
-    font-size: 2em; }
+    font-size: 2em;
+    padding-bottom: 2em; }
   p.lighest {
     color: #ffffff; }
   p.light {
@@ -140,7 +145,7 @@ img {
     max-width: 65em; }
 
   .container, .hero-container, .light-container, .dark-container, .darkest-container {
-    padding: 4em; }
+    padding: 10em; }
 
   .column-1 {
     width: 8.33333%; }
@@ -183,10 +188,12 @@ footer {
   padding: 3em 0em 3em 0em;
   font-family: "Lato", Helvetica, Tahoma, Verdana, sans-serif;
   text-transform: uppercase;
-  font-weight: 300; }
+  font-weight: 300;
+  clear: both; }
   footer p {
     font-size: .9em;
-    padding: 0; }
+    padding: 0;
+    float: left; }
   footer ul {
     float: right; }
     footer ul li {
@@ -199,7 +206,7 @@ footer {
   background-image: url("../../img/hero-boat.jpg"); }
 
 header {
-  background-color: blue;
+  background-color: transparent;
   position: fixed;
   width: 100%;
   left: 0;
@@ -212,16 +219,22 @@ header {
   header nav ul {
     float: right; }
     header nav ul li {
-      font-size: 1.25em;
-      font-family: "Lato", Helvetica, Tahoma, Verdana, sans-serif;
-      font-weight: 300;
-      color: #ffffff;
-      text-decoration: none;
-      text-transform: uppercase;
       display: inline;
-      list-style-type: none;
-      float: left;
-      margin-right: 4em; }
+      list-style-type: none; }
+      header nav ul li a {
+        font-size: 1.2em;
+        font-family: "Lato", Helvetica, Tahoma, Verdana, sans-serif;
+        font-weight: 500;
+        color: #ffffff;
+        text-decoration: none;
+        text-transform: uppercase;
+        float: left;
+        margin-right: 3em;
+        transition: all .2s ease-in-out; }
+        header nav ul li a:hover, header nav ul li a:active {
+          color: #ed8222;
+          border-bottom: 2px solid;
+          padding-bottom: 4px; }
 
 button {
   padding: 1em;
