@@ -1,4 +1,4 @@
-nav {
+header {
 	background-color: blue;
 	position: fixed;
 	width: 100%;
@@ -7,20 +7,51 @@ nav {
 	z-index: 100;
 	padding: 2em;
 
-	ul {
-		float: right;
+	img {
+		width: 100px;
+		float: left;
+	}
 
-		li {
-			font-size: 1.25em;
-			font-family: $font-stack-sans-serif;
-			font-weight: 300;
-			color: $color-link-light;
-			text-decoration: none;
-			text-transform: uppercase;
-			display: inline;
-			list-style-type: none;
-			float: left;
-			margin-right: 4em;
+	nav {
+		ul {
+			float: right;
+
+			li {
+				font-size: 1.25em;
+				font-family: $font-stack-sans-serif;
+				font-weight: 300;
+				color: $color-link-light;
+				text-decoration: none;
+				text-transform: uppercase;
+				display: inline;
+				list-style-type: none;
+				float: left;
+				margin-right: 4em;
+			}
 		}
+	}
+}
+
+button {
+	padding: 1em;
+	font-family: $font-stack-sans-serif;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 1.25em;
+	background-color: transparent;
+	transition: all .2s ease-in-out;
+
+
+	&.light {
+		border: 5px solid #fff;
+		color: $color-link-light;
+
+		&:hover {
+			background-color: $color-link-light;
+			color: $color-container-dark;
+		}
+	}
+	&.dark {
+
 	}
 }

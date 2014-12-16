@@ -1,13 +1,28 @@
 @import "helpers/colors";
 
+.container {
+	padding: 0;
+}
+
+.hero-container {
+	@extend .container;
+	background-color: black;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 700px;
+}
+
 .light-container {
+	@extend .container;
 	background-color: $color-container-light;
 }
 
 .dark-container {
+	@extend .container;
 	background-color: $color-container-dark;
 }
 
 .darkest-container {
+	@extend .container;
 	background-color: $color-container-darkest;
 }

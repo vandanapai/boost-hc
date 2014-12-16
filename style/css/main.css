@@ -38,7 +38,8 @@ h2 {
   font-size: 2.75em;
   text-transform: uppercase;
   font-weight: 900;
-  letter-spacing: .15em; }
+  letter-spacing: .15em;
+  padding-bottom: 1em; }
   h2.light {
     color: #ffffff; }
   h2.dark {
@@ -62,10 +63,32 @@ h4 {
 .centered {
   text-align: center; }
 
+p {
+  padding-bottom: 2em; }
+  p.large {
+    font-size: 2em; }
+  p.lighest {
+    color: #ffffff; }
+  p.light {
+    color: #91bed4; }
+  p.dark {
+    color: #666666; }
+  p.darkest {
+    color: #363a3d; }
+
 /*      NAVIGATION LINKS      */
 /*      SUBNAVIGATION LINKS       */
 /*       CONTAINER BACKGROUNDS       */
 /*       TYPOGRAPHY       */
+.container, .hero-container, .light-container, .dark-container, .darkest-container {
+  padding: 0; }
+
+.hero-container {
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 700px; }
+
 .light-container {
   background-color: #ffffff; }
 
@@ -103,8 +126,7 @@ img {
 
 .wrapper {
   width: 100%;
-  margin: 0 auto;
-  padding: 4em; }
+  margin: 0 auto; }
 
 [class*='column-'] {
   float: left;
@@ -116,6 +138,9 @@ img {
   .wrapper {
     width: 95%;
     max-width: 65em; }
+
+  .container, .hero-container, .light-container, .dark-container, .darkest-container {
+    padding: 4em; }
 
   .column-1 {
     width: 8.33333%; }
@@ -153,14 +178,27 @@ img {
   .column-12 {
     width: 100%; } }
 footer {
-  background-color: #303030; }
+  background-color: #303030;
+  color: #ffffff;
+  padding: 3em 0em 3em 0em;
+  font-family: "Lato", Helvetica, Tahoma, Verdana, sans-serif;
+  text-transform: uppercase;
+  font-weight: 300; }
+  footer p {
+    font-size: .9em;
+    padding: 0; }
+  footer ul {
+    float: right; }
+    footer ul li {
+      font-size: .9em;
+      display: inline;
+      margin-left: 2em; }
 
 /*      HERO IMAGES     */
-.hero-img {
-  background-color: black;
-  background-size: cover; }
+.hero-boat {
+  background-image: url("../../img/hero-boat.jpg"); }
 
-nav {
+header {
   background-color: blue;
   position: fixed;
   width: 100%;
@@ -168,9 +206,12 @@ nav {
   top: 0;
   z-index: 100;
   padding: 2em; }
-  nav ul {
+  header img {
+    width: 100px;
+    float: left; }
+  header nav ul {
     float: right; }
-    nav ul li {
+    header nav ul li {
       font-size: 1.25em;
       font-family: "Lato", Helvetica, Tahoma, Verdana, sans-serif;
       font-weight: 300;
@@ -181,5 +222,20 @@ nav {
       list-style-type: none;
       float: left;
       margin-right: 4em; }
+
+button {
+  padding: 1em;
+  font-family: "Lato", Helvetica, Tahoma, Verdana, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.25em;
+  background-color: transparent;
+  transition: all .2s ease-in-out; }
+  button.light {
+    border: 5px solid #fff;
+    color: #ffffff; }
+    button.light:hover {
+      background-color: #ffffff;
+      color: #003354; }
 
 /*# sourceMappingURL=main.css.map */
