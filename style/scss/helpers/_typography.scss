@@ -117,8 +117,21 @@ h4 {
     }
 }
 
+.subhead {
+    font-family: $font-stack-sans-serif;
+    font-size: 1.5em;
+    font-weight: 300;
+    color: $color-heading-dark;
+    
+    &.team {
+        max-width: 20em;
+    }
+
+}
+
 .centered {
     text-align: center;
+    margin: 0 auto;
 }
 
 .left {
@@ -132,6 +145,7 @@ h4 {
 p {
     font-size: 1.15em;
     line-height: 2em;
+    padding-bottom: 1em;
     &.philosophy {
         font-size: 1.25em;
     }
