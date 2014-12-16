@@ -1,3 +1,6 @@
+@import "helpers/mixins";
+@import "helpers/variables";
+
 footer {
 	background-color: $dark-grey;
 	color: $color-footer;
@@ -10,16 +13,65 @@ footer {
 	p {
 		font-size: .9em;
 		padding: 0;
-		float: left;
+		text-align: center;
+		float: none;
+
+		@include desktop{
+			float: left;
+		}
 	}
 
 	ul {
-		float: right;
-		
+		float: none;
+		list-style-type: none;
+
+		@include desktop {
+			float: right;
+		}
+
 		li {
 			font-size: .9em;
-			display: inline;
-			margin-left: 2em;
+			text-align: center;
+			margin-bottom: 1em;
+
+			@include desktop {
+				display: inline;
+				margin-left: 2em;
+			}
 		}
 	}
 }
+
+
+
+
+
+// 	p {
+// 		font-size: .9em;
+// 		padding: 0;
+// 		float: left;
+
+// 		@include mobile-and-tablet{
+// 			float: none;
+// 			text-align: center;
+// 		}
+// 	}
+
+// 	ul {
+// 		float: right;
+		
+// 		li {
+// 			font-size: .9em;
+// 			display: inline;
+// 			margin-left: 2em;
+
+// 		}
+
+// 		@include mobile-and-tablet {
+// 			float: none;
+// 			display: block;
+// 		}
+
+// 	}
+
+// }

@@ -34,16 +34,12 @@ img {
     min-height: 1px; 
     }
 
-@media #{$breakpoint-medium} {
+@include desktop {
  
     .wrapper {
         width: 95%;
         max-width: $grid-max-width; 
         }
-
-    .container {
-    	padding: 10em;
-    }
          
     @for $i from 1 through $grid-columns {
  

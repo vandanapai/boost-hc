@@ -4,5 +4,6 @@ $grid-max-width: 65em;
  
  
 // breakpoints
-$breakpoint-small: "only screen and (min-width: 20em)";
-$breakpoint-medium: "only screen and (min-width: 40em)";
+$mobile-width: 0px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
