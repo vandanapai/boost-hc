@@ -66,6 +66,18 @@ h2 {
     &.dark {
         color: $color-heading-dark;
     }
+
+    @include mobile-and-tablet {
+        font-size: 2em;
+    }
+
+    &.serif {
+        font-family: $font-stack-serif;
+        text-transform: none;
+        font-weight: normal;
+        color: $color-heading-darkest;
+        letter-spacing: .05em;
+    }
 }
 
 h3 {
@@ -74,31 +86,63 @@ h3 {
     text-transform: uppercase;
     font-weight: 900;
     letter-spacing: .1em;
-    padding: 1em;
+    
+    &.home {
+        padding: 1em;
+    }
 
     &.light {
         color: $color-heading-light;
+        padding-bottom: 1em;
     }
     &.dark {
         color: $color-heading-dark;
+    }
+
+    @include mobile-and-tablet {
+        font-size: 1.7em;
     }
 }
 
 h4 {
     font-family: $font-stack-sans-serif;
     font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: .1em;
+    padding-bottom: 1em;
+
+    &.light {
+        color: $color-heading-lightest;
+    }
 }
 
 .centered {
     text-align: center;
 }
 
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
 p {
     font-size: 1.15em;
-    line-height: 1.5em;
+    line-height: 2em;
+    &.philosophy {
+        font-size: 1.25em;
+    }
+
     &.large {
         font-size: 2em;
         padding-bottom: 2em;
+
+        @include mobile-and-tablet {
+            font-size: 1.5em;
+        }
     }
     &.lighest {
         color: $color-text-lightest;
