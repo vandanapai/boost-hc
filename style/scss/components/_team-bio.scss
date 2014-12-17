@@ -2,13 +2,20 @@
 	padding-top: 4em;
 
 	.avatar {
-		height: 300px;
-		width: 300px;
+		height: 315px;
+		width: 315px;
 		position: relative;
+		background-size: cover;
 
-		@include mobile {
+		@include mobile-and-tablet{
 			margin: 0 auto;
 		}
+
+		@include mobile-and-tablet {
+			height: 250px;
+			width: 250px;
+		}
+
 
 
 		.team-details {
@@ -16,7 +23,7 @@
 			position: absolute;
 			width: 100%;
 			height: 100%;
-			padding-top: 14.5em;
+			padding-top: 15.5em;
 			padding-left: 1.5em;
 			-webkit-transition: all 0.3s ease-in-out 0s;
 			transition: all 0.3s ease-in-out 0s;
@@ -35,6 +42,10 @@
 			h5 {
 				color: $color-heading-lightest;
 				font-weight: 300;
+			}
+
+			@include mobile-and-tablet {
+				padding-top: 10em;
 			}
 		}
 	}

@@ -84,6 +84,10 @@ h2, h3, h4, h5 {
         &.white {
             color: $color-text-lightest;
         }
+
+        @include mobile {
+            font-size: 1.5em;
+        }
     }
     &.subhead {
         font-family: $font-stack-sans-serif;
@@ -112,10 +116,10 @@ h2,h3,h4 {
 .text-overlay {
     position: relative;
     z-index: 3;
-    padding-top: 20em;
+    padding-top: 30em;
 
     @include mobile {
-        padding-top: 13em;
+        padding-top: 25em;
     }
 }
 

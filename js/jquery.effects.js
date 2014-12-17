@@ -1,26 +1,34 @@
-// $(document).ready(function () {
+$(document).ready(function () {
+
+	function isElementInViewport(elem) {
+		var $elem = $(elem);
+
+	var scrollElem = ((navigator.userAgent.toLowerCase().indexOf('webkit') != -1) ? 'body' : 'html');
+	var viewportTop = $(scrollElem).scrollTop();
+	var viewportBottom = viewportTop + $(window).height();
+
+	var elemTop = Math.round( $elem.offset().top);
+	var elemBottom = elemTop + $elem.height();
 
 
-// 	$(window).scroll(function () {
-// 		var startValue = 1000;
-// 		var stopValue = 1600;
-// 		var scrollTop = $(window).scrollTop();
+	return ((elemTop < viewportBottom) && (elemBottom > viewportTop));
 
-// 		if (scrollTop > startValue) {
-// 			$({countNum: $('.increase').text()}).animate({countNum: 100}, {
-// 			  duration: 700,
-// 			  easing:'linear',
-// 			  step: function() {
-// 			    $('.increase').text(Math.floor(this.countNum));
-// 			  },
-// 			  complete: function() {
-// 			    $('.increase').text(this.countNum);
-// 			  }
-// 			});
-// 		}
-// 	})
+	}
 
+	function checkAnimation() {
+		var $elem = $('.target');
 
+		if ($elem.hasClass('start')) {
+			return}
+
+		else if (isElementInViewport($elem)) {
+			$elem.addClass('start');
+		}
+	}
+
+	$(window).scroll(function () {
+		checkAnimation();
+	});
 
 
-// });
+});

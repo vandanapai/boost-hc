@@ -45,7 +45,7 @@
 
     &:before{
      content:" ";
-     background-color: rgba(8,8,8,.8);
+     background-color: rgba(8,8,8,.6);
      position: absolute;
     top: 0;
     left: 0;
@@ -68,6 +68,12 @@ img {
             -webkit-transform: translate(0px,-15px); /* Chrome, Safari, Opera */
             transform: translate(0px,-15px); /* Standard syntax */
         }
+    }
+    &.centered {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2em;
     }
 }
 
