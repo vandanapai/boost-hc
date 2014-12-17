@@ -374,13 +374,14 @@ img.stats {
     display: none; } }
 
 header {
-  background-color: transparent;
   position: fixed;
   width: 100%;
   left: 0;
   top: 0;
   z-index: 100;
   padding: 2em; }
+  header.nav-container {
+    transition: all .2s ease-in-out; }
   header img {
     float: left; }
   header nav ul {
@@ -445,6 +446,19 @@ button {
     button.dark:hover, button.dark:focus, button.dark:active {
       background-color: transparent;
       color: #ed8222; }
+
+.show-nav-bg {
+  background-color: rgba(237, 130, 34, 0.9);
+  transition: all .2s ease-in-out;
+  padding: 1em; }
+  .show-nav-bg img {
+    width: 150px; }
+  .show-nav-bg ul {
+    margin-top: 1em; }
+    .show-nav-bg ul li a:hover, .show-nav-bg ul li a:focus, .show-nav-bg ul li a:active {
+      color: #ffffff; }
+    .show-nav-bg ul li a:before {
+      background-color: #ffffff; }
 
 nav.expertise-sub-nav ul {
   list-style-type: none; }

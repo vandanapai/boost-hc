@@ -1,11 +1,14 @@
 header {
-	background-color: transparent;
 	position: fixed;
 	width: 100%;
 	left: 0;
 	top: 0;
 	z-index: 100;
 	padding: 2em;
+
+	&.nav-container {
+			transition: all .2s ease-in-out;
+	}
 
 	img {
 		float: left;
@@ -100,6 +103,31 @@ button {
 			color: $color-link-dark;
 		}
 
+	}
+}
+
+.show-nav-bg {
+	background-color: rgba(237, 130, 34, .9);
+	transition: all .2s ease-in-out;
+	padding: 1em;
+
+	img {
+		width: 150px;
+	}
+
+	ul {
+		margin-top: 1em;
+		li {
+			a {
+				&:hover, &:focus, &:active {
+					color: $color-link-light;
+				}
+
+				&:before {
+					background-color: $color-link-light;
+				}
+			}
+		}
 	}
 }
 
