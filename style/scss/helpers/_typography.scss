@@ -83,7 +83,7 @@ h2, h3, h4, h5 {
         font-weight: 300;
         letter-spacing: 0;
         color: $color-heading-dark;
-        padding: 0;
+        padding: 1em 0em 1em 0em;
         
             &.team {
                 max-width: 20em;
@@ -98,7 +98,6 @@ h5 {
 
 h2,h3,h4 {
     padding-bottom: 1em;
-    padding-top: 1em;
 }
 
 .centered {

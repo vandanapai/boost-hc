@@ -87,7 +87,7 @@ h2, h3, h4, h5 {
     font-weight: 300;
     letter-spacing: 0;
     color: #003354;
-    padding: 0; }
+    padding: 1em 0em 1em 0em; }
     h2.subhead.team, h3.subhead.team, h4.subhead.team, h5.subhead.team {
       max-width: 20em; }
 
@@ -95,8 +95,7 @@ h5 {
   padding-bottom: 3em; }
 
 h2, h3, h4 {
-  padding-bottom: 1em;
-  padding-top: 1em; }
+  padding-bottom: 1em; }
 
 .centered, img .centered {
   text-align: center;
@@ -163,6 +162,21 @@ p {
   background-repeat: no-repeat;
   height: 1000px;
   position: relative; }
+
+.bg-img-container {
+  height: 600px;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative; }
+  .bg-img-container:before {
+    content: " ";
+    background-color: rgba(8, 8, 8, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
 
 .light-container {
   background-color: #ffffff; }
@@ -301,6 +315,9 @@ footer {
 
 .hero-coast {
   background-image: url("../../img/hero-coast.jpg"); }
+
+.hero-waves {
+  background-image: url("../../img/hero-waves.jpeg"); }
 
 .title-gradient {
   background-image: -webkit-linear-gradient(top, rgba(35, 31, 32, 0) 0%, #000 100%);
