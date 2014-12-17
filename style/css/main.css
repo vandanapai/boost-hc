@@ -143,11 +143,11 @@ p {
 
 /*    HIGHLIGHT COLOR     */
 ::selection {
-  background: #ed8222;
+  background: #000;
   /* WebKit/Blink Browsers */ }
 
 ::-moz-selection {
-  background: #ed8222;
+  background: #000;
   /* Gecko Browsers */ }
 
 /*      NAVIGATION LINKS      */
@@ -368,6 +368,15 @@ img.stats {
   width: 100px;
   height: 100px !important;
   margin-bottom: 1em; }
+img.nudge-up {
+  transition: all .4s ease-in-out; }
+  img.nudge-up:hover {
+    -ms-transform: translate(0px, -15px);
+    /* IE 9 */
+    -webkit-transform: translate(0px, -15px);
+    /* Chrome, Safari, Opera */
+    transform: translate(0px, -15px);
+    /* Standard syntax */ }
 
 @media (min-width: 0px) and (max-width: 1023px) {
   .hide {

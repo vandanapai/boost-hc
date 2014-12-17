@@ -162,8 +162,8 @@ p {
 /*    HIGHLIGHT COLOR     */
 
 ::selection {
-  background: $orange; /* WebKit/Blink Browsers */
+  background: #000; /* WebKit/Blink Browsers */
 }
 ::-moz-selection {
-  background: $orange; /* Gecko Browsers */
+  background: #000; /* Gecko Browsers */
 }
