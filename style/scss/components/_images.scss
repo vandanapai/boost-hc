@@ -23,6 +23,10 @@
     background-image: url('../../img/team.jpg');
 }
 
+.hero-hands {
+    background-image: url('../../img/hero-hands.jpg')
+}
+
 .title-gradient {
     background-image: -webkit-linear-gradient(top, rgba(35,31,32,0) 0%, #000 100%);
     background-image: -o-linear-gradient(top, rgba(35,31,32,0) 0%, #000 100%);
@@ -48,6 +52,14 @@
         width: 100%;
      height: 100%;
      z-index: 1;
+    }
+}
+
+img {
+    &.stats {
+        width: 100px;
+        height: 100px !important;
+        margin-bottom: 1em;
     }
 }
 

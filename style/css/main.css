@@ -50,6 +50,10 @@ h1 {
     h1 {
       font-size: 2em;
       max-width: 16em; } }
+  h1.sans {
+    font-family: "Lato", Helvetica, Tahoma, Verdana, sans-serif;
+    font-weight: 700;
+    letter-spacing: .1em; }
 
 .hero-title-container {
   position: absolute;
@@ -177,12 +181,18 @@ p {
   background-repeat: no-repeat;
   height: 100vh;
   position: relative; }
+  @media (min-width: 0px) and (max-width: 1023px) {
+    .hero-container {
+      height: 80vh; } }
 
 .bg-img-container {
-  height: 600px;
+  height: 70vh;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative; }
+  @media (min-width: 0px) and (max-width: 1023px) {
+    .bg-img-container {
+      height: 80vh; } }
 
 .light-container {
   background-color: #ffffff; }
@@ -328,6 +338,9 @@ footer {
 .hero-team {
   background-image: url("../../img/team.jpg"); }
 
+.hero-hands {
+  background-image: url("../../img/hero-hands.jpg"); }
+
 .title-gradient {
   background-image: -webkit-linear-gradient(top, rgba(35, 31, 32, 0) 0%, #000 100%);
   background-image: -o-linear-gradient(top, rgba(35, 31, 32, 0) 0%, #000 100%);
@@ -350,6 +363,11 @@ footer {
   width: 100%;
   height: 100%;
   z-index: 1; }
+
+img.stats {
+  width: 100px;
+  height: 100px !important;
+  margin-bottom: 1em; }
 
 @media (min-width: 0px) and (max-width: 1023px) {
   .hide {
@@ -420,6 +438,13 @@ button {
     button.light:hover, button.light:focus, button.light:active {
       background-color: #ffffff;
       color: #003354; }
+  button.dark {
+    border: 2px solid #ed8222;
+    color: #ffffff;
+    background-color: #ed8222; }
+    button.dark:hover, button.dark:focus, button.dark:active {
+      background-color: transparent;
+      color: #ed8222; }
 
 nav.expertise-sub-nav ul {
   list-style-type: none; }

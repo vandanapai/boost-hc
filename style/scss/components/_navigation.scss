@@ -91,6 +91,14 @@ button {
 		}
 	}
 	&.dark {
+		border: 2px solid $color-link-dark;
+		color: $color-link-light;
+		background-color: $color-link-dark;
+
+		&:hover, &:focus, &:active {
+			background-color: transparent;
+			color: $color-link-dark;
+		}
 
 	}
 }

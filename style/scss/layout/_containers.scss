@@ -24,13 +24,21 @@
 	background-repeat: no-repeat;
 	height: 100vh;
 	position: relative;
+
+	@include mobile-and-tablet {
+		height: 80vh;
+	}
 }
 
 .bg-img-container {
-	height: 600px;
+	height: 70vh;
 	background-size: cover;
 	background-repeat: no-repeat;
 	position: relative;
+
+	@include mobile-and-tablet {
+		height: 80vh;
+	}
 }
 
 .light-container {
