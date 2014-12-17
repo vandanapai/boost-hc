@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Droid+Serif:400,700);
+@import url(http://fonts.googleapis.com/css?family=PT+Serif:400,700|Lato:100,300,400,700,900);
 body {
   background-color: #fff;
   margin: 0 auto; }
@@ -34,89 +34,71 @@ body {
 /* 		BODY	*/
 body {
   font-size: 1em;
-  font-family: "Droid Serif", Georgia, Times, serif;
+  font-family: "PT Serif", Georgia, Times, serif;
   color: #363a3d; }
 
 /*      TITLE 		*/
 h1 {
-  font-family: "Droid Serif", Georgia, Times, serif;
+  font-family: "PT Serif", Georgia, Times, serif;
   color: #ffffff;
   font-size: 3em;
   font-weight: normal; }
-  h1.hero-title {
-    position: absolute;
-    bottom: 1.5em;
-    max-width: 20em; }
-    @media (min-width: 768px) and (max-width: 1023px) {
-      h1.hero-title {
-        max-width: 16em; } }
-    @media (min-width: 0px) and (max-width: 767px) {
-      h1.hero-title {
-        max-width: 12em; } }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    h1 {
+      max-width: 16em; } }
   @media (min-width: 0px) and (max-width: 767px) {
     h1 {
-      font-size: 2em; } }
+      font-size: 2em;
+      max-width: 16em; } }
 
-/* 		HEADINGS		*/
-h2 {
-  font-family: "Lato", Helvetica, Tahoma, Verdana, sans-serif;
-  font-size: 2.75em;
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: .1em;
-  padding-bottom: 1em; }
-  h2.lightest {
-    color: #ffffff; }
-  h2.light {
-    color: #ed8222; }
-  h2.dark {
-    color: #003354; }
-  @media (min-width: 0px) and (max-width: 1023px) {
-    h2 {
-      font-size: 2em; } }
-  h2.serif {
-    font-family: "Droid Serif", Georgia, Times, serif;
-    text-transform: none;
-    font-weight: normal;
-    color: #202020;
-    letter-spacing: .05em; }
+.hero-title-container {
+  position: absolute;
+  bottom: 5em;
+  max-width: 65em; }
 
-h3 {
+/*    HEADINGS    */
+h2, h3, h4, h5 {
   font-family: "Lato", Helvetica, Tahoma, Verdana, sans-serif;
-  font-size: 2em;
   text-transform: uppercase;
   font-weight: 900;
-  letter-spacing: .1em; }
-  h3.home {
-    padding: 1em; }
-  h3.light {
-    color: #ed8222;
-    padding-bottom: 1em; }
-  h3.dark {
-    color: #003354; }
-  @media (min-width: 0px) and (max-width: 1023px) {
-    h3 {
-      font-size: 1.7em; } }
-
-h4 {
-  font-family: "Lato", Helvetica, Tahoma, Verdana, sans-serif;
-  font-size: 1.5em;
-  text-transform: uppercase;
-  font-weight: 500;
-  letter-spacing: .1em;
-  padding-bottom: 1em; }
-  h4.light {
+  letter-spacing: .25em; }
+  h2.lightest, h3.lightest, h4.lightest, h5.lightest {
     color: #ffffff; }
+  h2.light, h3.light, h4.light, h5.light {
+    color: #ed8222; }
+  h2.dark, h3.dark, h4.dark, h5.dark {
+    color: #003354; }
+  h2.darkest, h3.darkest, h4.darkest, h5.darkest {
+    color: #202020; }
+  h2.serif, h3.serif, h4.serif, h5.serif {
+    font-family: "PT Serif", Georgia, Times, serif;
+    text-transform: none;
+    font-weight: normal;
+    font-size: 2em;
+    letter-spacing: 0; }
+    h2.serif.blue, h3.serif.blue, h4.serif.blue, h5.serif.blue {
+      color: #91bed4;
+      line-height: 2em;
+      padding: 1em; }
+  h2.subhead, h3.subhead, h4.subhead, h5.subhead {
+    font-family: "Lato", Helvetica, Tahoma, Verdana, sans-serif;
+    font-size: 1.5em;
+    text-transform: none;
+    font-weight: 300;
+    letter-spacing: 0;
+    color: #003354;
+    padding: 0; }
+    h2.subhead.team, h3.subhead.team, h4.subhead.team, h5.subhead.team {
+      max-width: 20em; }
 
-.subhead {
-  font-family: "Lato", Helvetica, Tahoma, Verdana, sans-serif;
-  font-size: 1.5em;
-  font-weight: 300;
-  color: #003354; }
-  .subhead.team {
-    max-width: 20em; }
+h5 {
+  padding-bottom: 3em; }
 
-.centered {
+h2, h3, h4 {
+  padding-bottom: 1em;
+  padding-top: 1em; }
+
+.centered, img .centered {
   text-align: center;
   margin: 0 auto; }
 
@@ -132,12 +114,6 @@ p {
   padding-bottom: 1em; }
   p.philosophy {
     font-size: 1.25em; }
-  p.large {
-    font-size: 2em;
-    padding-bottom: 2em; }
-    @media (min-width: 0px) and (max-width: 1023px) {
-      p.large {
-        font-size: 1.5em; } }
   p.lighest {
     color: #ffffff; }
   p.light {
@@ -146,6 +122,15 @@ p {
     color: #666666; }
   p.darkest {
     color: #363a3d; }
+
+/*    HIGHLIGHT COLOR     */
+::selection {
+  background: #ed8222;
+  /* WebKit/Blink Browsers */ }
+
+::-moz-selection {
+  background: #ed8222;
+  /* Gecko Browsers */ }
 
 /*      NAVIGATION LINKS      */
 /*      SUBNAVIGATION LINKS       */
@@ -176,7 +161,7 @@ p {
   background-color: black;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 700px;
+  height: 1000px;
   position: relative; }
 
 .light-container {
@@ -347,9 +332,9 @@ header {
       display: inline;
       list-style-type: none; }
       header nav ul li a {
-        font-size: 1.2em;
+        font-size: 1em;
         font-family: "Lato", Helvetica, Tahoma, Verdana, sans-serif;
-        font-weight: 500;
+        font-weight: 300;
         color: #ffffff;
         text-decoration: none;
         text-transform: uppercase;
@@ -367,7 +352,7 @@ header {
           content: "";
           position: absolute;
           width: 100%;
-          height: 3px;
+          height: 2px;
           bottom: -6px;
           left: 0;
           background-color: #ed8222;
@@ -378,19 +363,21 @@ header {
           transition: all 0.3s ease-in-out 0s; }
 
 button {
-  padding: 1em;
+  padding: 1em 2em 1em 2em;
   margin-top: 1em;
   font-family: "Lato", Helvetica, Tahoma, Verdana, sans-serif;
   text-transform: uppercase;
-  font-weight: 500;
-  font-size: 1.25em;
-  letter-spacing: .05em;
+  font-weight: 700;
+  border-radius: 2px;
+  font-size: .75em;
+  letter-spacing: .1em;
   background-color: transparent;
-  transition: all .2s ease-in-out; }
+  transition: all .2s ease-in-out;
+  outline: none; }
   button.light {
     border: 2px solid #fff;
     color: #ffffff; }
-    button.light:hover {
+    button.light:hover, button.light:focus, button.light:active {
       background-color: #ffffff;
       color: #003354; }
 

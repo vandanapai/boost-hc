@@ -1,12 +1,12 @@
 @import "variables";
 @import "mixins";
 
-@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Droid+Serif:400,700);
+@import url(http://fonts.googleapis.com/css?family=PT+Serif:400,700|Lato:100,300,400,700,900);
 
 $lato: "Lato";
-$droid-serif: "Droid Serif";
+$pt-serif: "PT Serif";
 
-$font-stack-serif: $droid-serif, Georgia, Times, serif;
+$font-stack-serif: $pt-serif, Georgia, Times, serif;
 $font-stack-sans-serif: $lato, Helvetica, Tahoma, Verdana, sans-serif;
 
 
@@ -27,36 +27,31 @@ h1 {
     font-size: 3em;
     font-weight: normal;
 
-    &.hero-title {
-        position: absolute;
-        bottom: 1.5em;
-        max-width: 20em;
-
         @include tablet {
             max-width: 16em;
         }
 
         @include mobile {
-            max-width: 12em;
+            font-size: 2em;
+            max-width: 16em;
         }
-    }
-
-    @include mobile {
-        font-size: 2em;
-    }
 }
 
 
+.hero-title-container {
+    position: absolute;
+    bottom: 5em;
+    max-width: 65em;
+}
 
-/* 		HEADINGS		*/
+/*    HEADINGS    */
 
-h2 {
+h2, h3, h4, h5 {
     font-family: $font-stack-sans-serif;
-    font-size: 2.75em;
     text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: .1em;
-    padding-bottom: 1em;
+    font-weight: 900;
+    letter-spacing: .25em;
+
     &.lightest {
         color: $color-heading-lightest;
     }
@@ -66,73 +61,56 @@ h2 {
     &.dark {
         color: $color-heading-dark;
     }
-
-    @include mobile-and-tablet {
-        font-size: 2em;
+    &.darkest {
+        color: $color-heading-darkest;
     }
-
     &.serif {
         font-family: $font-stack-serif;
         text-transform: none;
         font-weight: normal;
-        color: $color-heading-darkest;
-        letter-spacing: .05em;
+        font-size: 2em;
+        letter-spacing: 0;
+        &.blue {
+            color: $color-text-light;
+            line-height: 2em;
+            padding: 1em;
+        }
     }
-}
-
-h3 {
-    font-family: $font-stack-sans-serif;
-    font-size: 2em;
-    text-transform: uppercase;
-    font-weight: 900;
-    letter-spacing: .1em;
-    
-    &.home {
-        padding: 1em;
-    }
-
-    &.light {
-        color: $color-heading-light;
-        padding-bottom: 1em;
-    }
-    &.dark {
+    &.subhead {
+        font-family: $font-stack-sans-serif;
+        font-size: 1.5em;
+        text-transform: none;
+        font-weight: 300;
+        letter-spacing: 0;
         color: $color-heading-dark;
-    }
-
-    @include mobile-and-tablet {
-        font-size: 1.7em;
+        padding: 0;
+        
+            &.team {
+                max-width: 20em;
+            }
     }
 }
 
-h4 {
-    font-family: $font-stack-sans-serif;
-    font-size: 1.5em;
-    text-transform: uppercase;
-    font-weight: 500;
-    letter-spacing: .1em;
+h5 {
+    padding-bottom: 3em;
+}
+
+
+h2,h3,h4 {
     padding-bottom: 1em;
-
-    &.light {
-        color: $color-heading-lightest;
-    }
-}
-
-.subhead {
-    font-family: $font-stack-sans-serif;
-    font-size: 1.5em;
-    font-weight: 300;
-    color: $color-heading-dark;
-    
-    &.team {
-        max-width: 20em;
-    }
-
+    padding-top: 1em;
 }
 
 .centered {
     text-align: center;
     margin: 0 auto;
 }
+
+img .centered {
+    @extend .centered;
+}
+
+
 
 .left {
     text-align: left;
@@ -149,15 +127,6 @@ p {
     &.philosophy {
         font-size: 1.25em;
     }
-
-    &.large {
-        font-size: 2em;
-        padding-bottom: 2em;
-
-        @include mobile-and-tablet {
-            font-size: 1.5em;
-        }
-    }
     &.lighest {
         color: $color-text-lightest;
     }
@@ -170,4 +139,13 @@ p {
     &.darkest {
         color: $color-text-darkest;
     }
+}
+
+/*    HIGHLIGHT COLOR     */
+
+::selection {
+  background: $orange; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: $orange; /* Gecko Browsers */
 }
