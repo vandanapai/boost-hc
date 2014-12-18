@@ -159,6 +159,10 @@ Licensed under the MIT license - http://opensource.org/licenses/MIT
 
 Copyright (c) 2014 Daniel Eden
 */
+#gear1, #gear2 {
+  -moz-transform-origin: 75px 75px;
+  transform-origin: 50% 50%; }
+
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
