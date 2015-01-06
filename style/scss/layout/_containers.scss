@@ -44,6 +44,10 @@
 .light-container {
 	@extend .container;
 	background-color: $color-container-light;
+
+	&.jobs-page {
+		padding: 2em;
+	}
 }
 
 .dark-container {
@@ -54,4 +58,8 @@
 .darkest-container {
 	@extend .container;
 	background-color: $color-container-darkest;
+}
+
+.right-float {
+	float: right !important;
 }

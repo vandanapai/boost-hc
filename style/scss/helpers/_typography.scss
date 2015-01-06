@@ -41,6 +41,11 @@ h1 {
         font-weight: 700;
         letter-spacing: .1em;
     }
+
+    &.jobs-title {
+        color: $color-hero-title-blue;
+        margin-top: 2.5em;
+    }
 }
 
 
@@ -52,7 +57,7 @@ h1 {
 
 /*    HEADINGS    */
 
-h2, h3, h4, h5 {
+h2, h3, h4, h5, h6 {
     font-family: $font-stack-sans-serif;
     text-transform: uppercase;
     font-weight: 900;
@@ -80,6 +85,9 @@ h2, h3, h4, h5 {
             color: $color-text-light;
             line-height: 2em;
             padding: 1em;
+            &.small {
+                font-size: 1em;
+            }
         }
         &.white {
             color: $color-text-lightest;
@@ -109,7 +117,7 @@ h5 {
 }
 
 
-h2,h3,h4 {
+h2,h3,h4, h6 {
     padding-bottom: 1em;
 }
 
@@ -160,6 +168,15 @@ p {
     }
     &.darkest {
         color: $color-text-darkest;
+    }
+}
+
+ul {
+    &.job-subpoints {
+        li {
+            line-height: 2em;
+            margin-left: 2em;
+        }
     }
 }
 

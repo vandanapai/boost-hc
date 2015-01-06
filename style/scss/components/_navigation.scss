@@ -131,13 +131,13 @@ button {
 }
 
 nav {
-	&.expertise-sub-nav {
+	&.sub-nav {
 		ul {
 			list-style-type: none;
 			li {
-				margin: 0;
+				margin-left: -1em;
 				padding-bottom: .5em;
-				text-align: right;
+				text-align: left;
 
 				a {
 					text-decoration: none;
@@ -145,7 +145,7 @@ nav {
 					font-family: $font-stack-sans-serif;
 					font-size: 1em;
 					color: $color-link-subnav-dark;
-					@inclue transition(all .3s ease-in-out);
+					@include transition(all .3s ease-in-out);
 
 					&:hover, &:active, &:focus {
 						color: $color-link-subnav-light;
@@ -155,3 +155,4 @@ nav {
 		}
 	}
 }
+
