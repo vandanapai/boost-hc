@@ -12,11 +12,11 @@ $(document).ready(function () {
 
 	})
 
-	$('.hide').hide();
+	$('.hidden').hide();
 	$('.sub-nav-link').on('click', function () {
 
 		$('.target-description').hide();
-		$('#target' + $(this).data('target')).show();
+		$('#target' + $(this).data('target')).fadeIn();
 
 
 		return false;
