@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title> Boost Healthcare Consulting </title>
+<link rel="stylesheet" type="text/css" href="style/css/main.css" />
+<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+<script src="js/jquery.nav.js"></script>
+</head>
+
+<body>
+
+<header class="nav-container"> 
+
+	<div class="fixed-nav wrapper">
+
+		<a href="home.html"><img src="img/boost-logo.png"></a>
+
+		<nav>
+
+			<ul id="siteNav">
+				<li> <a href="about.html">About Us</a> </li>
+				<li> <a href="expertise.html">Expertise</a> </li>
+				<li> <a href="careers.html">Careers</a> </li>
+				<li> <a href="contact.html">Contact</a> </li>
+			</ul>
+
+		</nav>
+	</div>
+
+</header>
+
+<div class="hero-container hero-biker">
+	<div class="title-gradient"></div>
+	<section class="wrapper">
+		<div class="hero-title-container">
+			<h1 class="hero-title wow fadeInDown"> Let's do something great together.</h1>
+		</div>
+	</section>
+</div>
+
+<div class="light-container">
+	<section class="wrapper">
+
+			<div class="row">
+				<div class="column-6">
+					<h5 class="light">Get in touch</h5>
+					<h6 class="serif">hello@boosthc.com</h6>
+
+					<h5 class="light">Ring Us</h5>
+					<h6 class="serif">415 377 7589</h6>
+
+					<h5 class="light">Visit us by the beach</h5>
+					<h6 class="serif">2221 Harbor Bay Parkway<br>
+			    	Alameda, CA 94502</h6>
+				</div>
+
+				<div class="column-6">
+					<div id="map-canvas"></div>
+				</div>
+			</div>
+
+
+
+
+	</section>
+</div>
+
+
+
+<div class="dark-container centered wow fadeIn">
+	<section class="wrapper">
+		form
+	</section>
+
+</div>
+
+
+<footer>
+	<section class="wrapper">
+		<div class="row">
+			<div class="column-6">
+				<p>© Boost Healthcare Consulting 2015</p>
+			</div>
+			<div class="column-6">
+				<ul>
+					<li><a href=""><img src="img/linkedin.svg"></a></li>
+					<li><a href=""><img src="img/facebook.svg"></a></li>
+					<li><a href=""><img src="img/twitter.svg"></a></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+</footer>
+
+ <script src="https://maps.googleapis.com/maps/api/js"></script>
+ <script>
+  function initialize() {
+    var mapCanvas = document.getElementById('map-canvas');
+    var mapOptions = {
+      center: new google.maps.LatLng(37.7629023,-122.346164),
+      zoom: 11,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+    var map = new google.maps.Map(mapCanvas, mapOptions);
+  }
+   google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+<script src="js/wow.min.js"></script>
+<script>
+ new WOW().init();
+</script>
+
+</body>
+
+</html>
