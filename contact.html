@@ -45,26 +45,33 @@
 	<section class="wrapper">
 
 			<div class="row">
-				<div class="column-6">
+				<div class="column-4">
 					<h5 class="light">Get in touch</h5>
-					<h6 class="serif">hello@boosthc.com</h6>
+					<h6 class="serif contact">hello@boosthc.com</h6>
 
-					<h5 class="light">Ring Us</h5>
-					<h6 class="serif">415 377 7589</h6>
-
-					<h5 class="light">Visit us by the beach</h5>
-					<h6 class="serif">2221 Harbor Bay Parkway<br>
-			    	Alameda, CA 94502</h6>
 				</div>
 
-				<div class="column-6">
-					<div id="map-canvas"></div>
+				<div class="column-4">
+
+
+					<h5 class="light">Ring Us</h5>
+					<h6 class="serif contact">415 377 7589</h6>
+				</div>
+
+				<div class="column-4">
+
+					<h5 class="light">Visit us by the beach</h5>
+					<h6 class="serif contact">2221 Harbor Bay Parkway<br>
+			    	Alameda, CA 94502</h6>
 				</div>
 			</div>
 
+			<div class="row">
 
-
-
+				<div class="column-12">
+					<div id="map-canvas"></div>
+				</div>
+			</div>
 	</section>
 </div>
 
@@ -99,12 +106,71 @@
  <script>
   function initialize() {
     var mapCanvas = document.getElementById('map-canvas');
+
+    var boostStyle = [
+	  {
+	    "stylers": [
+	      { "lightness": 47 },
+	      { "gamma": 1 }
+	    ]
+	  },{
+	    "featureType": "road.highway",
+	    "stylers": [
+	      { "weight": 0.1 }
+	    ]
+	  },{
+	    "featureType": "water",
+	    "stylers": [
+	      { "color": "#91bed4" }
+	    ]
+	  },{
+	    "elementType": "labels.icon",
+	    "stylers": [
+	      { "visibility": "off" }
+	    ]
+	  },{
+	    "elementType": "labels.text.fill",
+	    "stylers": [
+	      { "visibility": "on" },
+	      { "color": "#003354" }
+	    ]
+	  },{
+	    "elementType": "labels.text.stroke",
+	    "stylers": [
+	      { "visibility": "off" }
+	    ]
+	  },{
+	    "featureType": "road.arterial",
+	    "elementType": "labels",
+	    "stylers": [
+	      { "visibility": "off" }
+	    ]
+	  },{
+	    "featureType": "road.highway",
+	    "stylers": [
+	      { "color": "#666666" }
+	    ]
+	  }
+
+    ];
+
     var mapOptions = {
-      center: new google.maps.LatLng(37.7629023,-122.346164),
-      zoom: 11,
+      center: new google.maps.LatLng(37.7699042,-122.3053857),
+      zoom: 12,
+      disableDefaultUI: true,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     }
     var map = new google.maps.Map(mapCanvas, mapOptions);
+    map.setOptions({styles: boostStyle});
+
+	  var image = 'img/drop-pin.svg';
+	  var boostLocation = new google.maps.LatLng(37.73114,-122.248317);
+	  var boostMarker = new google.maps.Marker({
+	      position: boostLocation,
+	      map: map,
+	      icon: image
+	  });
+ 
   }
    google.maps.event.addDomListener(window, 'load', initialize);
 </script>
