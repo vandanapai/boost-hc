@@ -1,0 +1,41 @@
+form {
+	.inp {
+
+		margin-bottom: 2em;
+
+		&.col {
+			width: 33%;
+			display: inline-block;
+		}
+
+		&.row {
+			width: 100%;
+			display: block;
+		}
+
+	}
+
+	input{
+		background-color: $color-form-background-dark;
+		border: 3px solid $color-form-border;
+		height: 50px;
+		border-radius: 2px;
+		width: 100%;
+	}
+
+	textarea {
+		@extend input;
+		height: 300px;
+	}
+
+	label {
+		display: block;
+		font-family: $font-stack-sans-serif;
+    	text-transform: uppercase;
+    	font-weight: 900;
+    	letter-spacing: .25em;
+    	font-size: .75em;
+ 		color: $color-heading-lightest;
+ 		text-align: left;
+	}
+}
