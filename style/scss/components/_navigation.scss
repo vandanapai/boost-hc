@@ -12,6 +12,7 @@ header {
 
 	img {
 		float: left;
+		
 	}
 
 		nav {
@@ -114,6 +115,7 @@ button {
 
 	img {
 		width: 150px;
+		@include transition(all .2s ease-in-out);
 	}
 
 	ul {

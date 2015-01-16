@@ -1,4 +1,7 @@
 form {
+	*:focus {outline: none;}
+
+
 	.inp {
 
 		margin-bottom: 2em;
@@ -6,6 +9,11 @@ form {
 		&.col {
 			width: 33%;
 			display: inline-block;
+
+			@include mobile-and-tablet {
+				width: 100%;
+				display: block;
+			}
 		}
 
 		&.row {
@@ -17,10 +25,21 @@ form {
 
 	input{
 		background-color: $color-form-background-dark;
-		border: 3px solid $color-form-border;
+		border: 3px solid #003e59;
 		height: 50px;
 		border-radius: 2px;
 		width: 100%;
+		font-family: $font-stack-serif;
+		padding: 1em;
+		font-size: 1.15em;
+    	line-height: 2em;
+		color: $color-text-lightest;
+		@include transition(border 400ms ease-in-out);
+
+		&:focus{
+			border: 3px solid $color-form-border;
+			@include transition(border 400ms ease-in-out);
+		}
 	}
 
 	textarea {
@@ -35,7 +54,8 @@ form {
     	font-weight: 900;
     	letter-spacing: .25em;
     	font-size: .75em;
- 		color: $color-heading-lightest;
+ 		color: $color-text-light;
  		text-align: left;
+ 		margin-bottom: 1em;
 	}
 }

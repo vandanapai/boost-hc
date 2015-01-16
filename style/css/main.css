@@ -745,7 +745,12 @@ button {
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
   .show-nav-bg img {
-    width: 150px; }
+    width: 150px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
   .show-nav-bg ul {
     margin-top: 1em; }
     .show-nav-bg ul li a:hover, .show-nav-bg ul li a:focus, .show-nav-bg ul li a:active {
@@ -839,20 +844,43 @@ nav.sub-nav ul {
     #map-canvas {
       display: none; } }
 
+form *:focus {
+  outline: none; }
 form .inp {
   margin-bottom: 2em; }
   form .inp.col {
     width: 33%;
     display: inline-block; }
+    @media (min-width: 0px) and (max-width: 1023px) {
+      form .inp.col {
+        width: 100%;
+        display: block; } }
   form .inp.row {
     width: 100%;
     display: block; }
 form input, form textarea {
   background-color: #003354;
-  border: 3px solid #91bed4;
+  border: 3px solid #003e59;
   height: 50px;
   border-radius: 2px;
-  width: 100%; }
+  width: 100%;
+  font-family: "PT Serif", Georgia, Times, serif;
+  padding: 1em;
+  font-size: 1.15em;
+  line-height: 2em;
+  color: #ffffff;
+  -webkit-transition: border 400ms ease-in-out;
+  -moz-transition: border 400ms ease-in-out;
+  -ms-transition: border 400ms ease-in-out;
+  -o-transition: border 400ms ease-in-out;
+  transition: border 400ms ease-in-out; }
+  form input:focus, form textarea:focus {
+    border: 3px solid #91bed4;
+    -webkit-transition: border 400ms ease-in-out;
+    -moz-transition: border 400ms ease-in-out;
+    -ms-transition: border 400ms ease-in-out;
+    -o-transition: border 400ms ease-in-out;
+    transition: border 400ms ease-in-out; }
 form textarea {
   height: 300px; }
 form label {
@@ -862,7 +890,8 @@ form label {
   font-weight: 900;
   letter-spacing: .25em;
   font-size: .75em;
-  color: #ffffff;
-  text-align: left; }
+  color: #91bed4;
+  text-align: left;
+  margin-bottom: 1em; }
 
 /*# sourceMappingURL=main.css.map */
