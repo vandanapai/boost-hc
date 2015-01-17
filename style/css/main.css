@@ -802,11 +802,17 @@ nav.sub-nav ul {
     .team-grid .avatar-wrapper .avatar {
       height: 315px;
       width: 315px;
-      position: relative; }
+      position: relative;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat; }
       .team-grid .avatar-wrapper .avatar img {
         height: 100%;
         width: 100%; }
-        .team-grid .avatar-wrapper .avatar img :hover {
+        .team-grid .avatar-wrapper .avatar img:hover {
           -webkit-animation: animatedBackground 1s ease-in-out 1;
           -moz-animation: animatedBackground 1s ease-in-out 1;
           animation: animatedBackground 1s ease-in-out 1;
