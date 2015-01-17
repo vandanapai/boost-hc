@@ -2,42 +2,64 @@
 @import "helpers/variables";
 
 footer {
-	background-color: $dark-grey;
-	color: $color-footer;
-	padding: 3em 0em 3em 0em;
-	font-family: $font-stack-sans-serif;
-	text-transform: uppercase;
-	font-weight: 300;
-	clear: both;
-
-	p {
+	.primary-footer {
+		padding: 3em 0em 3em 0em;
+		background-color: $dark-grey;
+		color: $color-heading-lightest;
 		font-size: .9em;
-		padding: 0;
-		text-align: center;
-		float: none;
 
-		@include desktop{
-			float: left;
+		p {
+			color: $color-text-dark;
+		}
+
+		ul {
+			float: none;
+			list-style-type: none;
+
+			@include desktop {
+				float: left;
+			}
+
+			li {
+				font-size: 0.7em;
+				margin-bottom: 1em;
+				
+				img {
+					opacity: 0.3;
+					@include transition (all 0.2s ease-in-out);
+						
+						&:hover {
+						opacity: 0.7;
+				}
+
+				}
+
+
+				@include desktop {
+					display: inline;
+					margin-left: 2em;
+				}
+
+			}
 		}
 	}
 
-	ul {
-		float: none;
-		list-style-type: none;
+	.sub-footer {
+		font-family: $font-stack-sans-serif;
+		text-transform: uppercase;
+		background-color: $darkest-grey;
+		font-weight: 300;
+		color: rgba(255,255,255, .2);
 
-		@include desktop {
-			float: right;
+		p {
+			font-size: .7em;
+			letter-spacing: .2em;
+			padding-bottom: 0;
 		}
 
-		li {
-			font-size: .9em;
-			text-align: center;
-			margin-bottom: 1em;
-
-			@include desktop {
-				display: inline;
-				margin-left: 2em;
-			}
+		a {
+			text-decoration: none;
+			color: rgba(255,255,255, .2);
 		}
 	}
 }

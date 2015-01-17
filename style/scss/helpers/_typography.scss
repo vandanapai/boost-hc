@@ -104,7 +104,7 @@ h2, h3, h4, h5, h6 {
         font-family: $font-stack-sans-serif;
         font-size: 1.5em;
         text-transform: none;
-        font-weight: 300;
+        font-weight: 400;
         letter-spacing: 0;
         color: $color-heading-dark;
         padding: 0em 0em 1em 0em;
@@ -141,6 +141,10 @@ h2,h3,h4, h6 {
 
 .left {
     text-align: left;
+    @include mobile-and-tablet {
+        text-align: center;
+        float: none;
+    }
 }
 
 .right {

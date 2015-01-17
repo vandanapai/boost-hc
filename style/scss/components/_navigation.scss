@@ -7,11 +7,12 @@ header {
 	padding: 2em;
 
 	&.nav-container {
-			transition: all .2s ease-in-out;
+			transition: all 400ms ease-in-out;
 	}
 
 	img {
 		float: left;
+		transition: all 400ms ease-in-out;
 		
 	}
 
@@ -111,11 +112,15 @@ button {
 	background-color: rgba(237, 130, 34, .9);
 	padding: 1em;
 	box-shadow: 0 0px 15px rgba(0, 0, 0, 0.5);
-	@include transition(all .2s ease-in-out);
+	@include transition(all 2s ease-in-out);
 
-	img {
+	.nav-img-wrapper {
 		width: 150px;
-		@include transition(all .2s ease-in-out);
+		img {
+			
+			-webkit-transform: scale(.9);
+			transform: scale(.9);
+		}	
 	}
 
 	ul {
