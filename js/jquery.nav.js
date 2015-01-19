@@ -22,4 +22,8 @@ $(document).ready(function () {
 		return false;
 	});
 
+	$('#nav-mobile').on('click', function () {
+		$(this).toggleClass("mobile-nav-active");
+	})
+
 })

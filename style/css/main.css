@@ -795,9 +795,46 @@ nav.sub-nav ul {
       nav.sub-nav ul li a:hover, nav.sub-nav ul li a:active, nav.sub-nav ul li a:focus {
         color: #91bed4; }
 
-.hamburger-nav {
-  position: fixed;
-  background-color: rgba(237, 130, 34, 0.9); }
+@media (min-width: 0px) and (max-width: 1023px) {
+  header nav ul {
+    float: none;
+    margin: 0; }
+    header nav ul li {
+      display: block; } }
+#nav-mobile {
+  position: absolute;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px; }
+  #nav-mobile span, #nav-mobile span:before, #nav-mobile span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 2px;
+    width: 35px;
+    background-color: white;
+    position: absolute;
+    display: block;
+    content: '';
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -ms-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out; }
+    #nav-mobile span:before {
+      top: -10px; }
+    #nav-mobile span:after {
+      bottom: -10px; }
+  @media (min-width: 1024px) {
+    #nav-mobile {
+      display: none; } }
+
+.mobile-nav-active span, .mobile-nav-active #nav-mobile span:before, #nav-mobile .mobile-nav-active span:before, .mobile-nav-active #nav-mobile span:after, #nav-mobile .mobile-nav-active span:after {
+  background-color: transparent !important; }
+  .mobile-nav-active span:before, .mobile-nav-active #nav-mobile span:before, #nav-mobile .mobile-nav-active span:before {
+    transform: rotate(45deg);
+    top: 0 !important; }
+  .mobile-nav-active span:after, .mobile-nav-active #nav-mobile span:after, #nav-mobile .mobile-nav-active span:after {
+    transform: rotate(-45deg);
+    top: 0 !important; }
 
 .team-grid {
   padding-top: 4em; }

@@ -165,7 +165,71 @@ nav {
 	}
 }
 
-.hamburger-nav {
-	position: fixed;
-	background-color: rgba(237, 130, 34, .9);
+@include mobile-and-tablet {
+	header {
+		nav {
+			ul {
+				float: none;
+				margin: 0;
+				li {
+					display: block;
+				}
+			}
+		}
+	}
 }
+
+#nav-mobile {
+	position: absolute;
+	cursor: pointer; 
+	padding: 10px 35px 16px 0px;
+
+
+	span {
+		  cursor: pointer;
+		  border-radius: 1px;
+		  height: 2px;
+		  width: 35px;
+		  background-color: white;
+		  position: absolute;
+		  display: block;
+		  content: '';
+		  @include transition (all 500ms ease-in-out);
+
+		&:before {
+			@extend span;
+			top: -10px;
+		}
+
+		&:after {
+			@extend span;
+			bottom: -10px;
+		}
+	}
+
+	@include desktop {
+		display: none;
+	}
+}
+
+
+
+.mobile-nav-active {
+	
+	span{
+		background-color: transparent !important;
+	
+		&:before {
+			transform: rotate(45deg);
+			top: 0 !important;
+		}
+
+		&:after {
+			transform: rotate(-45deg);
+			top: 0 !important;
+		}
+	}
+
+
+}
+
