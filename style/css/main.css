@@ -757,7 +757,7 @@ button {
       background-color: transparent;
       color: #ed8222; }
 
-.show-nav-bg {
+.show-nav-bg, .jobs-nav {
   background-color: rgba(237, 130, 34, 0.9);
   padding: 1em;
   box-shadow: 0 0px 15px rgba(0, 0, 0, 0.5);
@@ -766,17 +766,21 @@ button {
   -ms-transition: all 2s ease-in-out;
   -o-transition: all 2s ease-in-out;
   transition: all 2s ease-in-out; }
-  .show-nav-bg .nav-img-wrapper {
+  .show-nav-bg .nav-img-wrapper, .jobs-nav .nav-img-wrapper {
     width: 150px; }
-    .show-nav-bg .nav-img-wrapper img {
+    .show-nav-bg .nav-img-wrapper img, .jobs-nav .nav-img-wrapper img {
       -webkit-transform: scale(0.9);
       transform: scale(0.9); }
-  .show-nav-bg ul {
+  .show-nav-bg ul, .jobs-nav ul {
     margin-top: 1em; }
-    .show-nav-bg ul li a:hover, .show-nav-bg ul li a:focus, .show-nav-bg ul li a:active {
+    .show-nav-bg ul li a:hover, .show-nav-bg ul li a:focus, .show-nav-bg ul li a:active, .jobs-nav ul li a:hover, .jobs-nav ul li a:focus, .jobs-nav ul li a:active {
       color: #ffffff; }
-    .show-nav-bg ul li a:before {
+    .show-nav-bg ul li a:before, .jobs-nav ul li a:before {
       background-color: #ffffff; }
+  @media (min-width: 0px) and (max-width: 1023px) {
+    .show-nav-bg, .jobs-nav {
+      background-color: #ed8222;
+      box-shadow: none; } }
 
 /* SUB NAVIGATION */
 nav.sub-nav ul {
@@ -825,13 +829,9 @@ nav.sub-nav ul {
   @media (min-width: 1024px) {
     #nav-mobile {
       display: none; } }
-  @media (min-width: 768px) and (max-width: 1023px) {
+  @media (min-width: 0px) and (max-width: 1023px) {
     #nav-mobile {
       bottom: 25px;
-      right: 20px; } }
-  @media (min-width: 0px) and (max-width: 767px) {
-    #nav-mobile {
-      bottom: 20px;
       right: 20px; } }
 
 .nav-mobile-active span, .nav-mobile-active #nav-mobile span:before, #nav-mobile .nav-mobile-active span:before, .nav-mobile-active #nav-mobile span:after, #nav-mobile .nav-mobile-active span:after {
@@ -845,16 +845,7 @@ nav.sub-nav ul {
     transform: rotate(-45deg);
     top: 0 !important; }
 
-@media (min-width: 0px) and (max-width: 767px) {
-  header {
-    padding: 1em; }
-    header .nav-img-wrapper {
-      width: 100px; }
-    header nav ul {
-      display: none; }
-      header nav ul li {
-        display: block; } }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 0px) and (max-width: 1023px) {
   header {
     padding: 1em; }
     header .nav-img-wrapper {

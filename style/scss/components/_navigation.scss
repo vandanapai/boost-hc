@@ -112,7 +112,7 @@ button {
 	}
 }
 
-.show-nav-bg {
+.show-nav-bg, .jobs-nav {
 	background-color: rgba(237, 130, 34, .9);
 	padding: 1em;
 	box-shadow: 0 0px 15px rgba(0, 0, 0, 0.5);
@@ -139,6 +139,11 @@ button {
 				}
 			}
 		}
+	}
+
+	@include mobile-and-tablet {
+		background-color: $orange;
+		box-shadow: none;
 	}
 }
 
@@ -203,13 +208,8 @@ nav {
 		display: none;
 	}
 
-	@include tablet {
+	@include mobile-and-tablet {
 		bottom: 25px;
-		right: 20px;
-	}
-
-	@include mobile {
-		bottom: 20px;
 		right: 20px;
 	}
 }
@@ -237,26 +237,7 @@ nav {
 
 }
 
-@include mobile{
-	header {
-		padding: 1em;
-
-		.nav-img-wrapper {
-			width: 100px;
-		}
-
-		nav {
-			ul {
-				display: none;
-				li {
-					display: block;
-				}
-			}
-		}
-	}
-}
-
-@include tablet{
+@include mobile-and-tablet{
 	header {
 		padding: 1em;
 

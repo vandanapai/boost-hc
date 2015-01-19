@@ -33,6 +33,7 @@ $(document).ready(function () {
 
 	$('#nav-mobile').on('click', function () {
 		$(this).toggleClass("nav-mobile-active");
+		return false;
 	})
 
 })
