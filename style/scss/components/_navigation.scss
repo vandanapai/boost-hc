@@ -17,6 +17,7 @@ header {
 	}
 
 		nav {
+
 			ul {
 				float: right;
 				margin-top: 35px;
@@ -69,7 +70,10 @@ header {
 				}
 			}
 		}
+	@include mobile-and-tablet {
+		background-color: $orange;
 	}
+}
 
 
 button {
@@ -117,7 +121,6 @@ button {
 	.nav-img-wrapper {
 		width: 150px;
 		img {
-			
 			-webkit-transform: scale(.9);
 			transform: scale(.9);
 		}	
@@ -138,6 +141,8 @@ button {
 		}
 	}
 }
+
+/* SUB NAVIGATION */
 
 nav {
 	&.sub-nav {
@@ -165,30 +170,17 @@ nav {
 	}
 }
 
-@include mobile-and-tablet {
-	header {
-		nav {
-			ul {
-				float: none;
-				margin: 0;
-				li {
-					display: block;
-				}
-			}
-		}
-	}
-}
+/* RESPONSIVE MENU */ 
 
 #nav-mobile {
 	position: absolute;
 	cursor: pointer; 
 	padding: 10px 35px 16px 0px;
 
-
 	span {
 		  cursor: pointer;
 		  border-radius: 1px;
-		  height: 2px;
+		  height: 3px;
 		  width: 35px;
 		  background-color: white;
 		  position: absolute;
@@ -198,33 +190,45 @@ nav {
 
 		&:before {
 			@extend span;
-			top: -10px;
+			top: -12px;
 		}
 
 		&:after {
 			@extend span;
-			bottom: -10px;
+			bottom: -12px;
 		}
 	}
 
 	@include desktop {
 		display: none;
 	}
+
+	@include tablet {
+		bottom: 25px;
+		right: 20px;
+	}
+
+	@include mobile {
+		bottom: 20px;
+		right: 20px;
+	}
 }
 
 
 
-.mobile-nav-active {
+.nav-mobile-active {
 	
 	span{
 		background-color: transparent !important;
 	
 		&:before {
+			-webkit-transform: rotate(45deg);
 			transform: rotate(45deg);
 			top: 0 !important;
 		}
 
 		&:after {
+			-webkit-transform: rotate(-45deg);
 			transform: rotate(-45deg);
 			top: 0 !important;
 		}
@@ -233,3 +237,40 @@ nav {
 
 }
 
+@include mobile{
+	header {
+		padding: 1em;
+
+		.nav-img-wrapper {
+			width: 100px;
+		}
+
+		nav {
+			ul {
+				display: none;
+				li {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+@include tablet{
+	header {
+		padding: 1em;
+
+		.nav-img-wrapper {
+			width: 150px;
+		}
+
+		nav {
+			ul {
+				display: none;
+				li {
+					display: block;
+				}
+			}
+		}
+	}
+}

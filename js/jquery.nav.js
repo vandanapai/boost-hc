@@ -2,12 +2,21 @@ $(document).ready(function () {
 
 
 	$(window).scroll(function () {
-		if ($(window).scrollTop() > 300 ) {
-			$('.nav-container').addClass('show-nav-bg');
+		if ($(window).width() > 1024) {
+
+			if ($(window).scrollTop() > 300 ) {
+				$('.nav-container').addClass('show-nav-bg');
+			}
+
+			else {
+				$('.nav-container').removeClass('show-nav-bg');
+			}
 		}
 
 		else {
-			$('.nav-container').removeClass('show-nav-bg');
+			if ($('.nav-container').hasClass('show-nav-bg')) {
+				$(this).removeClass('show-nav-bg');
+			}
 		}
 
 	})
@@ -23,7 +32,7 @@ $(document).ready(function () {
 	});
 
 	$('#nav-mobile').on('click', function () {
-		$(this).toggleClass("mobile-nav-active");
+		$(this).toggleClass("nav-mobile-active");
 	})
 
 })

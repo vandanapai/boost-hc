@@ -723,6 +723,9 @@ header {
           -ms-transition: all 0.3s ease-in-out;
           -o-transition: all 0.3s ease-in-out;
           transition: all 0.3s ease-in-out; }
+  @media (min-width: 0px) and (max-width: 1023px) {
+    header {
+      background-color: #ed8222; } }
 
 button {
   padding: 1em 2em 1em 2em;
@@ -775,6 +778,7 @@ button {
     .show-nav-bg ul li a:before {
       background-color: #ffffff; }
 
+/* SUB NAVIGATION */
 nav.sub-nav ul {
   list-style-type: none; }
   nav.sub-nav ul li {
@@ -795,12 +799,7 @@ nav.sub-nav ul {
       nav.sub-nav ul li a:hover, nav.sub-nav ul li a:active, nav.sub-nav ul li a:focus {
         color: #91bed4; }
 
-@media (min-width: 0px) and (max-width: 1023px) {
-  header nav ul {
-    float: none;
-    margin: 0; }
-    header nav ul li {
-      display: block; } }
+/* RESPONSIVE MENU */
 #nav-mobile {
   position: absolute;
   cursor: pointer;
@@ -808,7 +807,7 @@ nav.sub-nav ul {
   #nav-mobile span, #nav-mobile span:before, #nav-mobile span:after {
     cursor: pointer;
     border-radius: 1px;
-    height: 2px;
+    height: 3px;
     width: 35px;
     background-color: white;
     position: absolute;
@@ -820,22 +819,50 @@ nav.sub-nav ul {
     -o-transition: all 500ms ease-in-out;
     transition: all 500ms ease-in-out; }
     #nav-mobile span:before {
-      top: -10px; }
+      top: -12px; }
     #nav-mobile span:after {
-      bottom: -10px; }
+      bottom: -12px; }
   @media (min-width: 1024px) {
     #nav-mobile {
       display: none; } }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    #nav-mobile {
+      bottom: 25px;
+      right: 20px; } }
+  @media (min-width: 0px) and (max-width: 767px) {
+    #nav-mobile {
+      bottom: 20px;
+      right: 20px; } }
 
-.mobile-nav-active span, .mobile-nav-active #nav-mobile span:before, #nav-mobile .mobile-nav-active span:before, .mobile-nav-active #nav-mobile span:after, #nav-mobile .mobile-nav-active span:after {
+.nav-mobile-active span, .nav-mobile-active #nav-mobile span:before, #nav-mobile .nav-mobile-active span:before, .nav-mobile-active #nav-mobile span:after, #nav-mobile .nav-mobile-active span:after {
   background-color: transparent !important; }
-  .mobile-nav-active span:before, .mobile-nav-active #nav-mobile span:before, #nav-mobile .mobile-nav-active span:before {
+  .nav-mobile-active span:before, .nav-mobile-active #nav-mobile span:before, #nav-mobile .nav-mobile-active span:before {
+    -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
     top: 0 !important; }
-  .mobile-nav-active span:after, .mobile-nav-active #nav-mobile span:after, #nav-mobile .mobile-nav-active span:after {
+  .nav-mobile-active span:after, .nav-mobile-active #nav-mobile span:after, #nav-mobile .nav-mobile-active span:after {
+    -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
     top: 0 !important; }
 
+@media (min-width: 0px) and (max-width: 767px) {
+  header {
+    padding: 1em; }
+    header .nav-img-wrapper {
+      width: 100px; }
+    header nav ul {
+      display: none; }
+      header nav ul li {
+        display: block; } }
+@media (min-width: 768px) and (max-width: 1023px) {
+  header {
+    padding: 1em; }
+    header .nav-img-wrapper {
+      width: 150px; }
+    header nav ul {
+      display: none; }
+      header nav ul li {
+        display: block; } }
 .team-grid {
   padding-top: 4em; }
   .team-grid .avatar-wrapper {
