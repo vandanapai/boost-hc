@@ -52,7 +52,11 @@ h1 {
 .hero-title-container {
     position: absolute;
     bottom: 5em;
-    max-width: 65em;
+    max-width: 60em;
+
+    @include mobile {
+        max-width: 20em;
+    }
 }
 
 /*    HEADINGS    */
