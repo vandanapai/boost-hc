@@ -114,12 +114,11 @@ h2, h3, h4, h6 {
   padding-bottom: 1em; }
 
 .text-overlay {
-  position: relative;
-  z-index: 3;
-  padding-top: 30em; }
-  @media (min-width: 0px) and (max-width: 767px) {
+  z-index: 100;
+  margin-top: 20%; }
+  @media (min-width: 0px) and (max-width: 1023px) {
     .text-overlay {
-      padding-top: 25em; } }
+      padding: 3em; } }
 
 .centered {
   text-align: center;
@@ -640,7 +639,7 @@ footer .sub-footer {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1; }
+  z-index: -1; }
 
 img.stats {
   width: 100px;

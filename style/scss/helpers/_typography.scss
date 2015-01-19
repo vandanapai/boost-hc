@@ -125,13 +125,13 @@ h2,h3,h4, h6 {
 }
 
 .text-overlay {
-    position: relative;
-    z-index: 3;
-    padding-top: 30em;
+    z-index: 100;
+    margin-top: 20%;
 
-    @include mobile {
-        padding-top: 25em;
+    @include mobile-and-tablet {
+        padding: 3em;
     }
+
 }
 
 .centered {
