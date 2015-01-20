@@ -45,8 +45,32 @@ img {
  
 	    .column-#{$i} { 
 	     		width: 100% / $grid-columns * $i;
+
+                &.left-float {
+                    float: left;
+                }
+
+                &.right-float {
+                    float: right;
+                }
 	        }
  
 	}
      
+}
+
+@include tablet {
+
+    .column-3 {
+        width: 25%;
+    }
+
+    .column-4 {
+        &.avatar {
+            width: 50%;
+        }
+        
+    }
+
+
 }

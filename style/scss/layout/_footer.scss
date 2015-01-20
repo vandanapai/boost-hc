@@ -39,6 +39,9 @@ footer {
 
 		}
 
+		@include mobile-and-tablet {
+			text-align: center;
+		}
 	}
 
 

@@ -145,9 +145,11 @@ h2,h3,h4, h6 {
 
 .left {
     text-align: left;
+    float: left;
     @include mobile-and-tablet {
         text-align: center;
         float: none;
+        margin: 0 auto;
     }
 }
 
@@ -158,6 +160,7 @@ h2,h3,h4, h6 {
     @include mobile-and-tablet {
         text-align: center;
         float: none;
+        margin: 0 auto;
     }
 }
 
