@@ -775,6 +775,9 @@ header {
     header nav ul li {
       display: inline;
       list-style-type: none; }
+      @media (min-width: 0px) and (max-width: 1023px) {
+        header nav ul li {
+          display: block; } }
       header nav ul li a {
         font-size: 1em;
         font-family: "Lato", Helvetica, Tahoma, Verdana, sans-serif;
@@ -791,31 +794,32 @@ header {
         -ms-transition: all 0.3s ease-in-out;
         -o-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out; }
-        header nav ul li a:hover, header nav ul li a:active {
-          color: #ed8222; }
-          header nav ul li a:hover:before, header nav ul li a:active:before {
-            visibility: visible;
-            -webkit-transform: scaleX(1);
-            transform: scaleX(1); }
-        header nav ul li a:before {
-          content: "";
-          position: absolute;
-          width: 100%;
-          height: 2px;
-          bottom: -6px;
-          left: 0;
-          background-color: #ed8222;
-          visibility: hidden;
-          -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-          -webkit-transition: all 0.3s ease-in-out;
-          -moz-transition: all 0.3s ease-in-out;
-          -ms-transition: all 0.3s ease-in-out;
-          -o-transition: all 0.3s ease-in-out;
-          transition: all 0.3s ease-in-out; }
+        @media (min-width: 1024px) {
+          header nav ul li a:hover, header nav ul li a:active {
+            color: #ed8222; }
+            header nav ul li a:hover:before, header nav ul li a:active:before {
+              visibility: visible;
+              -webkit-transform: scaleX(1);
+              transform: scaleX(1); }
+          header nav ul li a:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -6px;
+            left: 0;
+            background-color: #ed8222;
+            visibility: hidden;
+            -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out; } }
   @media (min-width: 0px) and (max-width: 1023px) {
     header {
-      background-color: #ed8222; } }
+      background-color: rgba(237, 130, 34, 0.9); } }
 
 button {
   padding: 1em 2em 1em 2em;
@@ -869,7 +873,7 @@ button {
       background-color: #ffffff; }
   @media (min-width: 0px) and (max-width: 1023px) {
     .show-nav-bg, .jobs-nav {
-      background-color: #ed8222;
+      background-color: rgba(237, 130, 34, 0.9);
       box-shadow: none; } }
 
 /* SUB NAVIGATION */
@@ -921,7 +925,7 @@ nav.sub-nav ul {
       display: none; } }
   @media (min-width: 0px) and (max-width: 1023px) {
     #nav-mobile {
-      bottom: 25px;
+      top: 30px;
       right: 20px; } }
 
 .nav-mobile-active span, .nav-mobile-active #nav-mobile span:before, #nav-mobile .nav-mobile-active span:before, .nav-mobile-active #nav-mobile span:after, #nav-mobile .nav-mobile-active span:after {
@@ -940,10 +944,22 @@ nav.sub-nav ul {
     padding: 1em; }
     header .nav-img-wrapper {
       width: 150px; }
-    header nav ul {
+    header nav {
       display: none; }
-      header nav ul li {
-        display: block; } }
+      header nav .nav-mobile-active-menu ul {
+        margin-top: 100px;
+        float: none;
+        height: 100vh; }
+        header nav .nav-mobile-active-menu ul li {
+          text-align: center; }
+          header nav .nav-mobile-active-menu ul li a {
+            float: none;
+            font-size: 1.25em;
+            font-weight: 700;
+            letter-spacing: 0.25em;
+            margin: 0; }
+            header nav .nav-mobile-active-menu ul li a:hover {
+              color: #ffffff; } }
 .team-grid {
   padding-top: 4em; }
   .team-grid .avatar-wrapper {

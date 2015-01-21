@@ -33,7 +33,22 @@ $(document).ready(function () {
 
 	$('#nav-mobile').on('click', function () {
 		$(this).toggleClass("nav-mobile-active");
+		
+
+		if ($('#nav-mobile').hasClass("nav-mobile-active")) {
+		
+			$('#main-nav').show();
+		}
+
+		else {
+			$('#main-nav').hide();
+		}
+
 		return false;
+
+		// return false;
 	})
+
+
 
 })
