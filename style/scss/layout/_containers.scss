@@ -35,6 +35,7 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	position: relative;
+	overflow: hidden;
 
 	@include mobile-and-tablet {
 		height: 80vh;

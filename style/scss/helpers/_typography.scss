@@ -130,10 +130,29 @@ h2,h3,h4, h6 {
 
 .text-overlay {
     z-index: 100;
-    margin-top: 20%;
+    bottom: 50px;
+    overflow: hidden;
+    position: absolute;
+
+    h4 {
+        width: 80%;
+        display: inline;
+    }
+
+    button {
+        float: left;
+    }
 
     @include mobile-and-tablet {
         padding: 3em;
+    }
+
+    &.careers {
+        h4 {
+            display: block;
+            width: 90%;
+        }
+        bottom: 0;
     }
 
 }

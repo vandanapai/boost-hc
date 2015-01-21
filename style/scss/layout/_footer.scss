@@ -2,41 +2,68 @@
 @import "helpers/variables";
 
 footer {
+	background-color: $color-footer-background;
+	font-family: $font-stack-sans-serif;
+	font-weight: 300;
+	
+
+	a {
+			text-decoration: none;
+			padding: 0;
+		}
+
+
 	.primary-footer {
 		padding: 3em 0em 3em 0em;
-		background-color: $dark-grey;
 		color: $color-heading-lightest;
 
 		h5 {
 			font-size: .7em;
 		}
 
-		p{
-			color: $color-text-dark;
-			font-size: 1em;
+		p {
+			color: rgba(255,255,255, .4);
+			// font-family: $font-stack-serif;
+			font-size: .7em;
 			padding: 0;
-			text-decoration: none;
+			text-transform: uppercase;
+			letter-spacing: .2em;
+
+			.strong{
+				font-weight: 900;
+				padding-right: 1em;
+			}
+
+	
 		}
+
 
 		a {
-			@extend p;
-
-			border-bottom: 0px solid transparent;  
-			@include transition(all .3s ease-in-out);
+			color: rgba(255,255,255, .4);
+			@include transition (all 0.2s ease-in-out);
 
 			&:hover {
-				border-bottom: 2px solid $color-text-dark;
+				color: rgba(255,255,255, .6);
+
 			}
 		}
 
-		img {
-			opacity: 0.3;
-			@include transition (all 0.2s ease-in-out);
-						
-			&:hover {
-				opacity: 0.7;
+		ul {
+			list-style-type: none;
+			li {
+				display: inline;
+				padding-right: 0.5em;
+						img {
+							opacity: 0.3;
+							width:40px;
+							@include transition (all 0.2s ease-in-out);
+				
+							&:hover {
+							opacity: 0.6;
+							border-bottom: none;
+					}
+				}
 			}
-
 		}
 
 		@include mobile-and-tablet {
@@ -46,25 +73,31 @@ footer {
 
 
 	.sub-footer {
-		font-family: $font-stack-sans-serif;
 		text-transform: uppercase;
-		background-color: $darkest-grey;
-		font-weight: 300;
-		color: rgba(255,255,255, .2);
+		letter-spacing: 0.2em;
+		padding-bottom: 0;
 
 		p {
-			font-size: .7em;
-			letter-spacing: .2em;
-			padding-bottom: 0;
+			font-size: 0.7em;
+			color:  rgba(255,255,255, 0.1);
 		}
 
 		a {
-			text-decoration: none;
-			color: rgba(255,255,255, .2);
+			color: rgba(255,255,255, 0.1);
 		}
 	}
+
+	
 }
 
+/* LINE BREAK */
+
+.row {
+	&.footer {
+		border-top: 1px solid rgba(255,255,255, 0.1);
+
+	}
+}
 
 
 

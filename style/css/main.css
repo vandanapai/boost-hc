@@ -118,10 +118,22 @@ h2, h3, h4, h6 {
 
 .text-overlay {
   z-index: 100;
-  margin-top: 20%; }
+  bottom: 50px;
+  overflow: hidden;
+  position: absolute; }
+  .text-overlay h4 {
+    width: 80%;
+    display: inline; }
+  .text-overlay button {
+    float: left; }
   @media (min-width: 0px) and (max-width: 1023px) {
     .text-overlay {
       padding: 3em; } }
+  .text-overlay.careers {
+    bottom: 0; }
+    .text-overlay.careers h4 {
+      display: block;
+      width: 90%; }
 
 .centered {
   text-align: center;
@@ -145,19 +157,19 @@ h2, h3, h4, h6 {
       float: none;
       margin: 0 auto; } }
 
-p, footer .primary-footer a {
+p {
   font-size: 1.15em;
   line-height: 2em;
   padding-bottom: 1em; }
-  p.philosophy, footer .primary-footer a.philosophy {
+  p.philosophy {
     font-size: 1.25em; }
-  p.lighest, footer .primary-footer a.lighest {
+  p.lighest {
     color: #ffffff; }
-  p.light, footer .primary-footer a.light {
+  p.light {
     color: #91bed4; }
-  p.dark, footer .primary-footer a.dark {
+  p.dark {
     color: #666666; }
-  p.darkest, footer .primary-footer a.darkest {
+  p.darkest {
     color: #363a3d; }
 
 ul.job-subpoints li {
@@ -451,7 +463,8 @@ Copyright (c) 2014 Daniel Eden
   height: 70vh;
   background-size: cover;
   background-repeat: no-repeat;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   @media (min-width: 0px) and (max-width: 1023px) {
     .bg-img-container {
       height: 80vh; } }
@@ -612,51 +625,68 @@ img {
   .row:after {
     clear: both; }
 
-footer .primary-footer {
-  padding: 3em 0em 3em 0em;
-  background-color: #303030;
-  color: #ffffff; }
-  footer .primary-footer h5 {
-    font-size: .7em; }
-  footer .primary-footer p, footer .primary-footer a {
-    color: #666666;
-    font-size: 1em;
-    padding: 0;
-    text-decoration: none; }
-  footer .primary-footer a {
-    border-bottom: 0px solid transparent;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out; }
-    footer .primary-footer a:hover {
-      border-bottom: 2px solid #666666; }
-  footer .primary-footer img {
-    opacity: 0.3;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -ms-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out; }
-    footer .primary-footer img:hover {
-      opacity: 0.7; }
-  @media (min-width: 0px) and (max-width: 1023px) {
-    footer .primary-footer {
-      text-align: center; } }
-footer .sub-footer {
-  font-family: "Lato", Helvetica, Tahoma, Verdana, sans-serif;
-  text-transform: uppercase;
+footer {
   background-color: #202020;
-  font-weight: 300;
-  color: rgba(255, 255, 255, 0.2); }
-  footer .sub-footer p, footer .sub-footer .primary-footer a, footer .primary-footer .sub-footer a {
-    font-size: .7em;
-    letter-spacing: .2em;
-    padding-bottom: 0; }
-  footer .sub-footer a {
+  font-family: "Lato", Helvetica, Tahoma, Verdana, sans-serif;
+  font-weight: 300; }
+  footer a {
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.2); }
+    padding: 0; }
+  footer .primary-footer {
+    padding: 3em 0em 3em 0em;
+    color: #ffffff; }
+    footer .primary-footer h5 {
+      font-size: .7em; }
+    footer .primary-footer p {
+      color: rgba(255, 255, 255, 0.4);
+      font-size: .7em;
+      padding: 0;
+      text-transform: uppercase;
+      letter-spacing: .2em; }
+      footer .primary-footer p .strong {
+        font-weight: 900;
+        padding-right: 1em; }
+    footer .primary-footer a {
+      color: rgba(255, 255, 255, 0.4);
+      -webkit-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      -ms-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out; }
+      footer .primary-footer a:hover {
+        color: rgba(255, 255, 255, 0.6); }
+    footer .primary-footer ul {
+      list-style-type: none; }
+      footer .primary-footer ul li {
+        display: inline;
+        padding-right: 0.5em; }
+        footer .primary-footer ul li img {
+          opacity: 0.3;
+          width: 40px;
+          -webkit-transition: all 0.2s ease-in-out;
+          -moz-transition: all 0.2s ease-in-out;
+          -ms-transition: all 0.2s ease-in-out;
+          -o-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out; }
+          footer .primary-footer ul li img:hover {
+            opacity: 0.6;
+            border-bottom: none; }
+    @media (min-width: 0px) and (max-width: 1023px) {
+      footer .primary-footer {
+        text-align: center; } }
+  footer .sub-footer {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    padding-bottom: 0; }
+    footer .sub-footer p {
+      font-size: 0.7em;
+      color: rgba(255, 255, 255, 0.1); }
+    footer .sub-footer a {
+      color: rgba(255, 255, 255, 0.1); }
+
+/* LINE BREAK */
+.row.footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1); }
 
 /*      HERO IMAGES     */
 .hero-boat {
@@ -847,7 +877,7 @@ nav.sub-nav ul {
   list-style-type: none; }
   nav.sub-nav ul li {
     margin-left: -1em;
-    padding-bottom: .5em;
+    padding-bottom: 0.5em;
     text-align: left; }
     nav.sub-nav ul li a {
       text-decoration: none;
