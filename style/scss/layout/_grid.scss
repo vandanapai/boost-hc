@@ -75,14 +75,14 @@ img {
 
 }
 
-@include mobile {
+// @include mobile {
 
-    .column-4 {
-        &.avatar {
-            width: 50%;
-        }
+//     .column-4 {
+//         &.avatar {
+//             width: 50%;
+//         }
         
-    }
+//     }
 
 
-}
+// }

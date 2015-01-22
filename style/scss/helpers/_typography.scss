@@ -72,6 +72,9 @@ h2, h3, h4, h5, h6 {
     }
     &.light {
         color: $color-heading-light;
+        &.contact{
+            padding-bottom: 2em;
+        }
     }
     &.dark {
         color: $color-heading-dark;
@@ -85,6 +88,10 @@ h2, h3, h4, h5, h6 {
         font-weight: normal;
         font-size: 2em;
         letter-spacing: 0;
+        a {
+            text-decoration: none;
+            color: $color-text-darkest;
+        }
         &.blue {
             color: $color-text-light;
             line-height: 2em;
@@ -97,7 +104,7 @@ h2, h3, h4, h5, h6 {
             color: $color-text-lightest;
         }
         &.contact {
-            font-size: 1.5em;
+            font-size: 1.25em;
         }
 
         @include mobile {

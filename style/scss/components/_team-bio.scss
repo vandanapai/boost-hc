@@ -1,5 +1,9 @@
 .team-grid {
-	padding-top: 4em;
+	padding-top: 2em;
+
+	@include mobile {
+		padding-top: 1em;
+	}
 
 	.avatar {
 		
