@@ -3,7 +3,7 @@
 @import "helpers/variables";
 
 .container {
-	padding: 3em;
+	padding: 1em;
 
 	@include tablet {
 		padding: 5em;
@@ -48,12 +48,20 @@
 
 	&.jobs-page {
 		padding: 2em;
+
+		@include mobile {
+			padding: 0;
+		}
 	}
 }
 
 .dark-container {
 	@extend .container;
 	background-color: $color-container-dark;
+
+	@include mobile {
+		padding: 2em;
+	}
 }
 
 .darkest-container {
