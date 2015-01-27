@@ -19,7 +19,7 @@
 
 .hero-container {
 	@extend .container;
-	background-color: black;
+	background-color: none;
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 100vh;
@@ -71,4 +71,23 @@
 
 .right-float {
 	float: right !important;
+}
+
+.loader {
+	position: absolute;
+	z-index: 0;
+	width: 100%;
+	height: 100vh;
+
+	svg path,
+	svg rect{
+  		fill: #FF6700;
+	}
+
+	.loader-bars {
+		position: absolute;
+		margin: 0 auto;
+		top: 50%;
+		width: 100%;
+	}
 }
