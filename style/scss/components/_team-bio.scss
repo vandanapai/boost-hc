@@ -17,11 +17,11 @@
 	    		width: 300px;
 	    		max-height: 300px;
 
-					@include desktop {
-						@include transition (all 0.5s ease-in-out);
-						-webkit-transform: scale(1.1);
-						transform: scale(1.1);
-					}
+					// @include desktop {
+					// 	@include transition (all 0.5s ease-in-out);
+					// 	-webkit-transform: scale(1.1);
+					// 	transform: scale(1.1);
+					// }
 					
 				}
 
@@ -106,7 +106,7 @@
     width: 0;
     position: absolute;
     pointer-events: none;
-    border-bottom-color: #fff;
+    border-bottom-color: grey;
     border-width: 15px;
     left: 50%;
     margin: -20px 0 0 -15px;
@@ -114,14 +114,16 @@
 
 .about-expander {
     position: absolute;
-    background: $color-container-light;
+    background: grey;
     top: auto;
     width: 100%;
     left: 0;
     text-align: left;
     height: 0;
     overflow: hidden;
+    margin-top: 10px;
 }
+
 
 .about-expander-inner {
     padding: 50px 30px;
