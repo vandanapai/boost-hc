@@ -1053,8 +1053,8 @@ nav.sub-nav ul {
           -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0); } }
 
-.about-grid li > figure, .about-grid li > a, .aboutgrid li > a img,
-.about-grid li > figure img {
+.about-grid li > a,
+.about-grid li > a img {
   border: none;
   outline: none;
   display: block;
@@ -1075,7 +1075,7 @@ nav.sub-nav ul {
 
 .about-expander {
   position: absolute;
-  background: #ddd;
+  background: grey;
   top: auto;
   left: 0;
   width: 100%;
@@ -1095,18 +1095,27 @@ nav.sub-nav ul {
   top: 20px;
   right: 20px;
   cursor: pointer; }
-  .about-close:before, .about-close:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    height: 1px;
-    background: #888;
-    transform: rotate(45deg); }
-  .about-close:after {
-    transform: rotate(-45deg); }
-  .about-close:hover:after, .about-close:hover:before {
-    background: #333; }
+
+.about-close::before,
+.about-close::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  height: 1px;
+  background: #fff;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+.about-close::after {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
+
+.about-close:hover::before,
+.about-close:hover::after {
+  background: #333; }
 
 .about-fullimg,
 .about-details {
@@ -1121,24 +1130,11 @@ nav.sub-nav ul {
 
 .about-fullimg {
   text-align: center; }
-  .about-fullimg img {
-    display: inline-block;
-    max-height: 100%;
-    max-width: 100%; }
 
-.about-details h3 {
-  font-weight: 500;
-  font-size: 52px;
-  padding: 40px 0 10px;
-  margin-bottom: 10px; }
-.about-details h5 {
-  font-weight: 300;
-  font-size: 30px; }
-.about-details p {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
-  color: #999; }
+.about-fullimg img {
+  display: inline-block;
+  max-height: 100%;
+  max-width: 100%; }
 
 .about-loading {
   width: 20px;
@@ -1150,8 +1146,28 @@ nav.sub-nav ul {
   top: 50%;
   left: 50%;
   margin: -25px 0 0 -25px;
+  -webkit-animation: loader 0.5s infinite ease-in-out both;
+  -moz-animation: loader 0.5s infinite ease-in-out both;
   animation: loader 0.5s infinite ease-in-out both; }
 
+@-webkit-keyframes loader {
+  0% {
+    background: #ddd; }
+  33% {
+    background: #ccc;
+    box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
+  66% {
+    background: #ccc;
+    box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; } }
+@-moz-keyframes loader {
+  0% {
+    background: #ddd; }
+  33% {
+    background: #ccc;
+    box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
+  66% {
+    background: #ccc;
+    box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; } }
 @keyframes loader {
   0% {
     background: #ddd; }
@@ -1164,9 +1180,6 @@ nav.sub-nav ul {
 @media screen and (max-width: 830px) {
   .about-expander h3 {
     font-size: 32px; }
-
-  .about-expander h5 {
-    font-size: 20px; }
 
   .about-expander p {
     font-size: 13px; }

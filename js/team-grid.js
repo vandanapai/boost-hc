@@ -162,10 +162,9 @@ $.fn.imagesLoaded = function( callback ) {
 };
 
 var Grid = (function() {
-		// grid selector
-		var $selector = '#about-grid', 
+
 		// list of items
-		$grid = $( $selector ),
+	var $grid = $( '#about-grid' ),
 		// the items
 		$items = $grid.children( 'li' ),
 		// current expanded item's index
@@ -194,14 +193,14 @@ var Grid = (function() {
 		settings = {
 			minHeight : 500,
 			speed : 350,
-			easing : 'ease',
-			showVisitButton : true
+			easing : 'ease'
 		};
 
 	function init( config ) {
 		
 		// the settings..
 		settings = $.extend( true, {}, settings, config );
+
 		// preload all images
 		$grid.imagesLoaded( function() {
 
@@ -343,16 +342,12 @@ var Grid = (function() {
 	Preview.prototype = {
 		create : function() {
 			// create Preview structure:
-			this.$title = $( '<h3></h3>' );
-			this.$description = $( '<p></p>' );
-			var detailAppends = [this.$title, this.$description];
-			if (settings.showVisitButton === true) {
-				this.$href = $( '<a href="#">Visit website</a>' );
-				detailAppends.push(this.$href);
-			}
-			this.$details = $( '<div class="about-details"></div>' ).append(detailAppends);
-			this.$loading = $( '<div class="about-loading"></div>' );
-			this.$fullimage = $( '<div class="about-fullimg"></div>' ).append( this.$loading );
+			this.$name = $( '<h4></h4>' );
+			this.$title = $( '<h5></h5>' );
+			this.$bio = $( '<p></p>' );
+			this.$details = $( '<div class="about-details"></div>' ).append( this.$name, this.$title, this.$bio);
+			// this.$loading = $( '<div class="about-loading"></div>' );
+			// this.$fullimage = $( '<div class="about-fullimg"></div>' ).append( this.$loading );
 			this.$closePreview = $( '<span class="about-close"></span>' );
 			this.$previewInner = $( '<div class="about-expander-inner"></div>' ).append( this.$closePreview, this.$fullimage, this.$details );
 			this.$previewEl = $( '<div class="about-expander"></div>' ).append( this.$previewInner );
@@ -384,39 +379,36 @@ var Grid = (function() {
 			// update preview´s content
 			var $itemEl = this.$item.children( 'a' ),
 				eldata = {
-					href : $itemEl.attr( 'href' ),
-					largesrc : $itemEl.data( 'largesrc' ),
 					title : $itemEl.data( 'title' ),
-					description : $itemEl.data( 'description' )
+					name : $itemEl.data( 'name' ),
+					description : $itemEl.data( 'bio' )
 				};
 
 			this.$title.html( eldata.title );
-			this.$description.html( eldata.description );
-			if (settings.showVisitButton === true) {
-				this.$href.attr( 'href', eldata.href );
-			}
+			this.$name.html( eldata.name );
+			this.$bio.html( eldata.description );
 
 			var self = this;
 			
 			// remove the current image in the preview
-			if( typeof self.$largeImg != 'undefined' ) {
-				self.$largeImg.remove();
-			}
+			// if( typeof self.$largeImg != 'undefined' ) {
+			// 	self.$largeImg.remove();
+			// }
 
 			// preload large image and add it to the preview
 			// for smaller screens we don´t display the large image (the media query will hide the fullimage wrapper)
-			if( self.$fullimage.is( ':visible' ) ) {
-				this.$loading.show();
-				$( '<img/>' ).load( function() {
-					var $img = $( this );
-					if( $img.attr( 'src' ) === self.$item.children('a').data( 'largesrc' ) ) {
-						self.$loading.hide();
-						self.$fullimage.find( 'img' ).remove();
-						self.$largeImg = $img.fadeIn( 350 );
-						self.$fullimage.append( self.$largeImg );
-					}
-				} ).attr( 'src', eldata.largesrc );	
-			}
+			// if( self.$fullimage.is( ':visible' ) ) {
+			// 	this.$loading.show();
+			// 	$( '<img/>' ).load( function() {
+			// 		var $img = $( this );
+			// 		if( $img.attr( 'src' ) === self.$item.children('a').data( 'largesrc' ) ) {
+			// 			self.$loading.hide();
+			// 			self.$fullimage.find( 'img' ).remove();
+			// 			self.$largeImg = $img.fadeIn( 350 );
+			// 			self.$fullimage.append( self.$largeImg );
+			// 		}
+			// 	} ).attr( 'src', eldata.largesrc );	
+			// }
 
 		},
 		open : function() {
