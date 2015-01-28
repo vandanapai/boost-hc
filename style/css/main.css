@@ -741,6 +741,7 @@ footer {
 
 .dark-overlay:before {
   content: " ";
+  background: url("../../img/dot.png");
   background-color: rgba(8, 8, 8, 0.6);
   position: absolute;
   top: 0;
