@@ -346,8 +346,6 @@ var Grid = (function() {
 			this.$title = $( '<h5></h5>' );
 			this.$bio = $( '<p></p>' );
 			this.$details = $( '<div class="about-details"></div>' ).append( this.$name, this.$title, this.$bio);
-			// this.$loading = $( '<div class="about-loading"></div>' );
-			// this.$fullimage = $( '<div class="about-fullimg"></div>' ).append( this.$loading );
 			this.$closePreview = $( '<span class="about-close"></span>' );
 			this.$previewInner = $( '<div class="about-expander-inner"></div>' ).append( this.$closePreview, this.$fullimage, this.$details );
 			this.$previewEl = $( '<div class="about-expander"></div>' ).append( this.$previewInner );
@@ -390,25 +388,6 @@ var Grid = (function() {
 
 			var self = this;
 			
-			// remove the current image in the preview
-			// if( typeof self.$largeImg != 'undefined' ) {
-			// 	self.$largeImg.remove();
-			// }
-
-			// preload large image and add it to the preview
-			// for smaller screens we don´t display the large image (the media query will hide the fullimage wrapper)
-			// if( self.$fullimage.is( ':visible' ) ) {
-			// 	this.$loading.show();
-			// 	$( '<img/>' ).load( function() {
-			// 		var $img = $( this );
-			// 		if( $img.attr( 'src' ) === self.$item.children('a').data( 'largesrc' ) ) {
-			// 			self.$loading.hide();
-			// 			self.$fullimage.find( 'img' ).remove();
-			// 			self.$largeImg = $img.fadeIn( 350 );
-			// 			self.$fullimage.append( self.$largeImg );
-			// 		}
-			// 	} ).attr( 'src', eldata.largesrc );	
-			// }
 
 		},
 		open : function() {
