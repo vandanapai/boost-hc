@@ -1133,12 +1133,12 @@ nav.sub-nav ul {
     width: 100%; } }
 #map-canvas {
   width: 100%;
-  height: 500px;
+  height: 70vh;
   background-color: green; }
-  @media (min-width: 0px) and (max-width: 767px) {
-    #map-canvas {
-      display: none;
-      padding: 0; } }
+  #map-canvas .gmnoprint a, #map-canvas .gmnoprint span, #map-canvas .gmnoprint #nav-mobile span:before, #nav-mobile #map-canvas .gmnoprint span:before, #map-canvas .gmnoprint #nav-mobile span:after, #nav-mobile #map-canvas .gmnoprint span:after {
+    display: none; }
+  #map-canvas .gmnoprint div {
+    background: none !important; }
 
 form *:focus {
   outline: none; }

@@ -35,9 +35,10 @@
 
 </header>
 
-<div class="hero-container hero-biker">
+<div id="map-canvas" class="hero-container hero-biker">
 	<div class="title-gradient"></div>
 	<section class="wrapper">
+
 		<div class="hero-title-container">
 			<h1 class="hero-title wow fadeInDown"> Let's do something great together.</h1>
 		</div>
@@ -48,7 +49,7 @@
 	<section class="wrapper">
 
 			<div class="row">
-				<div class="column-4">
+				<div class="column-12">
 					<h5 class="light contact">General Inquiries </h5>
 					<a href="mailto:info@boost-hc.com"><h6 class="serif contact">info@boost-hc.com</a><br>
 					<a href="tel:(415) 377-7589">415.377.7589</h6></a>
@@ -59,17 +60,8 @@
 
 				</div>
 
-				<div class="column-8">
-			    	<div id="map-canvas"></div>
-				</div>
 			</div>
 
-			<div class="row">
-
-				<div class="column-12">
-					
-				</div>
-			</div>
 	</section>
 </div>
 
@@ -139,55 +131,99 @@
     var mapCanvas = document.getElementById('map-canvas');
 
     var boostStyle = [
-	  {
-	    "stylers": [
-	      { "lightness": 47 },
-	      { "gamma": 1 }
-	    ]
-	  },{
-	    "featureType": "road.highway",
-	    "stylers": [
-	      { "weight": 0.1 }
-	    ]
-	  },{
-	    "featureType": "water",
-	    "stylers": [
-	      { "color": "#91bed4" }
-	    ]
-	  },{
-	    "elementType": "labels.icon",
-	    "stylers": [
-	      { "visibility": "off" }
-	    ]
-	  },{
-	    "elementType": "labels.text.fill",
-	    "stylers": [
-	      { "visibility": "on" },
-	      { "color": "#003354" }
-	    ]
-	  },{
-	    "elementType": "labels.text.stroke",
-	    "stylers": [
-	      { "visibility": "off" }
-	    ]
-	  },{
-	    "featureType": "road.arterial",
-	    "elementType": "labels",
-	    "stylers": [
-	      { "visibility": "off" }
-	    ]
-	  },{
-	    "featureType": "road.highway",
-	    "stylers": [
-	      { "color": "#666666" }
-	    ]
-	  }
+{
+    "featureType": "water",
+    "stylers": [
+      { "color": "#013354" }
+    ]
+  },{
+    "featureType": "landscape",
+    "elementType": "geometry",
+    "stylers": [
+      { "color": "#013354" },
+      { "lightness": -20 }
+    ]
+  },{
+    "featureType": "poi",
+    "elementType": "geometry",
+    "stylers": [
+      { "visibility": "on" },
+      { "color": "#013354" },
+      { "saturation": -23 }
+    ]
+  },{
+    "elementType": "labels.text.fill",
+    "stylers": [
+      { "weight": 2.2 },
+      { "color": "#303030" },
+      { "visibility": "off" }
+    ]
+  },{
+    "featureType": "road.highway",
+    "elementType": "labels",
+    "stylers": [
+      { "visibility": "off" }
+    ]
+  },{
+    "featureType": "poi.business",
+    "elementType": "labels",
+    "stylers": [
+      { "visibility": "off" }
+    ]
+  },{
+    "featureType": "transit",
+    "stylers": [
+      { "visibility": "off" }
+    ]
+  },{
+  },{
+    "featureType": "road",
+    "elementType": "geometry",
+    "stylers": [
+      { "visibility": "on" },
+      { "weight": 0.2 },
+      { "color": "#013354" },
+      { "lightness": 3 },
+      { "saturation": -21 },
+      { "gamma": 1.11 }
+    ]
+  },{
+  },{
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      { "visibility": "on" },
+      { "color": "#013354" },
+      { "saturation": -65 },
+      { "lightness": 81 }
+    ]
+  },{
+    "featureType": "administrative",
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      { "visibility": "on" },
+      { "color": "#ED8222" },
+      { "lightness": -32 },
+      { "saturation": -48 }
+    ]
+  },{
+    "featureType": "road",
+    "elementType": "labels.icon",
+    "stylers": [
+      { "visibility": "off" }
+    ]
+  },{
+    "featureType": "poi",
+    "elementType": "labels",
+    "stylers": [
+      { "visibility": "off" }
+    ]
+  }
 
     ];
 
     var mapOptions = {
-      center: new google.maps.LatLng(37.7699042,-122.3053857),
-      zoom: 12,
+      center: new google.maps.LatLng(37.7313946,-122.2511065),
+      zoom: 13,
       disableDefaultUI: true,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     }
