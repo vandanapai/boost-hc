@@ -4,6 +4,16 @@
     margin: 0 auto;
     text-align: center;
     width: 100%;
+    
+    // &:hover > li {
+    //     opacity: 0.5;
+    //     @include transition (all 0.5s ease-in-out);
+
+    // }
+
+    // &:hover > li:hover {
+    //     opacity: 1.0;
+    // }
 	
 	li {
     display: inline-block;
@@ -11,6 +21,10 @@
     vertical-align: top;
     height: 300px;
     overflow: hidden;
+
+    // &.about-expanded {
+    //     opacity: 1.0;
+    // }
 
 	    figure, a {
 	    	img {
@@ -86,6 +100,7 @@
 			// }	   	 	
 
     	}
+
 	}
 }
 
@@ -114,7 +129,7 @@
 
 .about-expander {
     position: absolute;
-    background: grey;
+    background: $color-container-light;
     top: auto;
     width: 100%;
     left: 0;
@@ -126,6 +141,7 @@
 
 
 .about-expander-inner {
+    opacity: 1.0 !important;
     padding: 50px 30px;
     height: 100%;
     margin: 0 auto;
@@ -179,43 +195,24 @@
     height: 100%;
     overflow: hidden;
     // position: relative;
+    
+     h4 {
+    font-weight: 400;
+    font-size: 2em;
+    font-family: $font-stack-serif;
+    letter-spacing: 0;
+    text-transform: none;
+    color: $color-heading-light;
+    padding-bottom: 0.5em;
+
+    }
+
+    h5 {
+    font-size: 1em;
+    padding-bottom: 1em;
+    color: $color-hero-title-blue;
+    }
 }
-
-.about-details {
-    // padding: 0 40px 0 20px;
-}
-
-.about-fullimg {
-    text-align: center;
-}
-
-.about-fullimg img {
-    display: inline-block;
-    max-height: 100%;
-    max-width: 100%;
-}
-
-// .about-details h4 {
-//     font-weight: 300;
-//     font-size: 52px;
-//     padding: 40px 0 10px;
-//     margin-bottom: 10px;
-// }
-
-// .about-details h5 {
-//     font-weight: 300;
-//     font-size: 52px;
-//     padding: 40px 0 10px;
-//     margin-bottom: 10px;
-// }
-
-// .about-details p {
-//     font-weight: 400;
-//     font-size: 16px;
-//     line-height: 22px;
-//     color: #999;
-// }
-
 
 .about-loading {
     width: 20px;
@@ -252,15 +249,14 @@
 
 @media screen and (max-width: 830px) {
 
-    .about-expander h3 { font-size: 32px; }
-    .about-expander p { font-size: 13px; }
-    .about-expander a { font-size: 12px; }
+    .about-expander h4 { font-size: 1.5em; }
+    .about-expander h5 { font-size: 1em; }
+    .about-expander p { font-size: 0.9em; }
 
 }
 
 @media screen and (max-width: 650px) {
 
-    .about-fullimg { display: none; }
     .about-details { float: none; width: 100%; }
     
 }

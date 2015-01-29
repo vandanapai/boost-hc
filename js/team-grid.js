@@ -191,7 +191,7 @@ var Grid = (function() {
 		support = Modernizr.csstransitions,
 		// default settings
 		settings = {
-			minHeight : 500,
+			minHeight : 200,
 			speed : 350,
 			easing : 'ease'
 		};
@@ -272,16 +272,27 @@ var Grid = (function() {
 
 	function initItemsEvents( $items ) {
 		$items.on( 'click', 'span.about-close', function() {
+			
+
 			hidePreview();
 			return false;
 		} ).children( 'a' ).on( 'click', function(e) {
-
 			var $item = $( this ).parent();
+
+			
+		    $item.siblings().find('img').stop().animate({opacity: 0.4}, 300);
+		    $item.find('img').stop().animate({opacity: 1.0}, 300);
+
+
+
 			// check if item already opened
 			current === $item.index() ? hidePreview() : showPreview( $item );
 			return false;
 
 		} );
+
+    	
+	
 	}
 
 	function getWinSize() {
@@ -325,6 +336,7 @@ var Grid = (function() {
 	}
 
 	function hidePreview() {
+		$items.animate({opacity: 1.0}, 300);
 		current = -1;
 		var preview = $.data( this, 'preview' );
 		preview.close();
