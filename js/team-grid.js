@@ -272,21 +272,23 @@ var Grid = (function() {
 
 	function initItemsEvents( $items ) {
 		$items.on( 'click', 'span.about-close', function() {
-			
-
+			$items.find('img').animate({opacity: 1.0}, 300);
 			hidePreview();
 			return false;
 		} ).children( 'a' ).on( 'click', function(e) {
 			var $item = $( this ).parent();
 
-			
-		    $item.siblings().find('img').stop().animate({opacity: 0.4}, 300);
-		    $item.find('img').stop().animate({opacity: 1.0}, 300);
-
 
 
 			// check if item already opened
-			current === $item.index() ? hidePreview() : showPreview( $item );
+			if(current === $item.index()) {
+				$items.find('img').animate({opacity: 1.0}, 300);
+				hidePreview();
+				} else {
+		    	$item.siblings().find('img').stop().animate({opacity: 0.4}, 300);
+		    	$item.find('img').stop().animate({opacity: 1.0}, 300);
+				showPreview( $item );
+				}
 			return false;
 
 		} );
@@ -312,10 +314,12 @@ var Grid = (function() {
 
 			// not in the same row
 			if( previewPos !== position ) {
+
 				// if position > previewPos then we need to take te current preview´s height in consideration when scrolling the window
 				if( position > previewPos ) {
 					scrollExtra = preview.height;
 				}
+				
 				hidePreview();
 			}
 			// same row
@@ -335,9 +339,12 @@ var Grid = (function() {
 
 	}
 
-	function hidePreview() {
+	function changeOpacity() {
 
-		$items.find('img').animate({opacity: 1.0}, 300);
+	}
+
+	function hidePreview() {
+		
 		current = -1;
 		var preview = $.data( this, 'preview' );
 		preview.close();
