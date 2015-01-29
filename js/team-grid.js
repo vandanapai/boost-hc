@@ -336,7 +336,8 @@ var Grid = (function() {
 	}
 
 	function hidePreview() {
-		$items.animate({opacity: 1.0}, 300);
+
+		$items.find('img').animate({opacity: 1.0}, 300);
 		current = -1;
 		var preview = $.data( this, 'preview' );
 		preview.close();
