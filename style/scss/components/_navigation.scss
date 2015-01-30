@@ -199,7 +199,7 @@ nav {
 		  position: absolute;
 		  display: block;
 		  content: '';
-		  @include transition (all 500ms ease-in-out);
+		  @include transition (all 200ms ease-in-out);
 
 		&:before {
 			@extend span;

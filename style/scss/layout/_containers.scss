@@ -22,11 +22,13 @@
 	background-color: none;
 	background-size: cover;
 	background-repeat: no-repeat;
+
 	height: 100vh;
 	position: relative;
 
 	@include mobile-and-tablet {
 		height: 80vh;
+		background-position: center;
 	}
 }
 
