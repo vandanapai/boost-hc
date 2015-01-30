@@ -256,16 +256,18 @@ nav {
 		padding: 3em;
 		@include transition(all 400ms ease-in-out);
 
-		&:active, &:focus, &:hover {
-			background-color: rgba(275,257,275,0.1);
-
 		}
 		a {
+			color: rgba(275,257,275,0.8);
 			font-size: 1.5em;
 			margin: 0;
 			float: none;
 			font-weight: 900;
 			letter-spacing: 0.25em;
+
+
+			&:active, &:focus, &:hover {
+				color: rgba(275,257,275,1.0);
 
 
 		}

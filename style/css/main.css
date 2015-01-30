@@ -625,91 +625,139 @@ img {
     width: 25%; }
 
   .column-4.avatar {
-    width: 50%; }
-
+    width: 50%; } }
+@media (min-width: 0px) and (max-width: 1023px) {
   .column-1.left-float {
     margin: 0 auto;
     float: none; }
+    .column-1.left-float.svg {
+      text-align: center; }
   .column-1.right-float {
     margin: 0 auto;
     float: none; }
+    .column-1.right-float.svg {
+      text-align: center; }
 
   .column-2.left-float {
     margin: 0 auto;
     float: none; }
+    .column-2.left-float.svg {
+      text-align: center; }
   .column-2.right-float {
     margin: 0 auto;
     float: none; }
+    .column-2.right-float.svg {
+      text-align: center; }
 
   .column-3.left-float {
     margin: 0 auto;
     float: none; }
+    .column-3.left-float.svg {
+      text-align: center; }
   .column-3.right-float {
     margin: 0 auto;
     float: none; }
+    .column-3.right-float.svg {
+      text-align: center; }
 
   .column-4.left-float {
     margin: 0 auto;
     float: none; }
+    .column-4.left-float.svg {
+      text-align: center; }
   .column-4.right-float {
     margin: 0 auto;
     float: none; }
+    .column-4.right-float.svg {
+      text-align: center; }
 
   .column-5.left-float {
     margin: 0 auto;
     float: none; }
+    .column-5.left-float.svg {
+      text-align: center; }
   .column-5.right-float {
     margin: 0 auto;
     float: none; }
+    .column-5.right-float.svg {
+      text-align: center; }
 
   .column-6.left-float {
     margin: 0 auto;
     float: none; }
+    .column-6.left-float.svg {
+      text-align: center; }
   .column-6.right-float {
     margin: 0 auto;
     float: none; }
+    .column-6.right-float.svg {
+      text-align: center; }
 
   .column-7.left-float {
     margin: 0 auto;
     float: none; }
+    .column-7.left-float.svg {
+      text-align: center; }
   .column-7.right-float {
     margin: 0 auto;
     float: none; }
+    .column-7.right-float.svg {
+      text-align: center; }
 
   .column-8.left-float {
     margin: 0 auto;
     float: none; }
+    .column-8.left-float.svg {
+      text-align: center; }
   .column-8.right-float {
     margin: 0 auto;
     float: none; }
+    .column-8.right-float.svg {
+      text-align: center; }
 
   .column-9.left-float {
     margin: 0 auto;
     float: none; }
+    .column-9.left-float.svg {
+      text-align: center; }
   .column-9.right-float {
     margin: 0 auto;
     float: none; }
+    .column-9.right-float.svg {
+      text-align: center; }
 
   .column-10.left-float {
     margin: 0 auto;
     float: none; }
+    .column-10.left-float.svg {
+      text-align: center; }
   .column-10.right-float {
     margin: 0 auto;
     float: none; }
+    .column-10.right-float.svg {
+      text-align: center; }
 
   .column-11.left-float {
     margin: 0 auto;
     float: none; }
+    .column-11.left-float.svg {
+      text-align: center; }
   .column-11.right-float {
     margin: 0 auto;
     float: none; }
+    .column-11.right-float.svg {
+      text-align: center; }
 
   .column-12.left-float {
     margin: 0 auto;
     float: none; }
+    .column-12.left-float.svg {
+      text-align: center; }
   .column-12.right-float {
     margin: 0 auto;
-    float: none; } }
+    float: none; }
+    .column-12.right-float.svg {
+      text-align: center; } }
 .wrapper,
 .row {
   *zoom: 1; }
@@ -1048,14 +1096,15 @@ nav.sub-nav ul {
     -ms-transition: all 400ms ease-in-out;
     -o-transition: all 400ms ease-in-out;
     transition: all 400ms ease-in-out; }
-    .mobile-active li:active, .mobile-active li:focus, .mobile-active li:hover {
-      background-color: rgba(255, 255, 255, 0.1); }
-    .mobile-active li a {
-      font-size: 1.5em;
-      margin: 0;
-      float: none;
-      font-weight: 900;
-      letter-spacing: 0.25em; }
+  .mobile-active a {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.5em;
+    margin: 0;
+    float: none;
+    font-weight: 900;
+    letter-spacing: 0.25em; }
+    .mobile-active a:active, .mobile-active a:focus, .mobile-active a:hover {
+      color: white; }
 
 @media (min-width: 0px) and (max-width: 1023px) {
   header {
@@ -1103,7 +1152,7 @@ nav.sub-nav ul {
 
 .about-expander {
   position: absolute;
-  background: #f7f7f7;
+  background: #ffffff;
   top: auto;
   width: 100%;
   left: 0;
@@ -1157,7 +1206,8 @@ nav.sub-nav ul {
 
 .about-details {
   height: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  display: inline-block; }
   .about-details h4 {
     font-weight: 400;
     font-size: 2em;
@@ -1170,6 +1220,10 @@ nav.sub-nav ul {
     font-size: 1em;
     padding-bottom: 1em;
     color: #91bed4; }
+  .about-details p {
+    color: #363a3d;
+    display: inline-block;
+    float: right; }
 
 .about-loading {
   width: 20px;

@@ -72,6 +72,10 @@ img {
         
     }
 
+
+}
+
+@include mobile-and-tablet {
     @for $i from 1 through $grid-columns {
  
         .column-#{$i} { 
@@ -79,26 +83,21 @@ img {
                 &.left-float {
                     margin: 0 auto;
                     float: none;
+
+                    &.svg {
+                    text-align: center;
+                     }
                 }
 
                 &.right-float {
                     margin: 0 auto;
-                    float: none;
+                    float: none;   
+                    
+                    &.svg {
+                    text-align: center;
+                     }
                 }
             }
 
     }
-
 }
-
-// @include mobile {
-
-//     .column-4 {
-//         &.avatar {
-//             width: 50%;
-//         }
-        
-//     }
-
-
-// }
