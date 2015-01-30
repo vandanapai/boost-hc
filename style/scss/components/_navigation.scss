@@ -185,7 +185,7 @@ nav {
 
 /* RESPONSIVE MENU */ 
 
-#nav-mobile {
+#navButton {
 	position: absolute;
 	cursor: pointer; 
 	padding: 10px 35px 16px 0px;
@@ -242,6 +242,34 @@ nav {
 		}
 	}
 
+
+}
+
+.mobile-active {
+	float: none;
+	text-align: center;
+	margin-top: 25vh;
+	display: block;
+
+	li {
+		
+		padding: 3em;
+		@include transition(all 400ms ease-in-out);
+
+		&:active, &:focus, &:hover {
+			background-color: rgba(275,257,275,0.1);
+
+		}
+		a {
+			font-size: 1.5em;
+			margin: 0;
+			float: none;
+			font-weight: 900;
+			letter-spacing: 0.25em;
+
+
+		}
+	}
 
 }
 

@@ -113,23 +113,10 @@
     position: relative;
 }
 
-.about-grid li.about-expanded > a::after {
-    top: auto;
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-    border-bottom-color: grey;
-    border-width: 15px;
-    left: 50%;
-    margin: -20px 0 0 -15px;
-}
 
 .about-expander {
     position: absolute;
-    background: $color-container-light;
+    background: #f7f7f7;
     top: auto;
     width: 100%;
     left: 0;
@@ -142,16 +129,19 @@
 
 .about-expander-inner {
     opacity: 1.0 !important;
-    padding: 50px 30px;
+    padding: 50px;
     height: 100%;
     margin: 0 auto;
+    // position: relative;
 
     @include desktop {
         width: 960px;
+        padding: 50px 10px;
     }
 
     @include tablet {
         width: 640px;
+        padding: 50px 10px;
     }
 }
 

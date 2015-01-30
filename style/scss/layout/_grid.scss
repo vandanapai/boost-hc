@@ -72,6 +72,22 @@ img {
         
     }
 
+    @for $i from 1 through $grid-columns {
+ 
+        .column-#{$i} { 
+                
+                &.left-float {
+                    margin: 0 auto;
+                    float: none;
+                }
+
+                &.right-float {
+                    margin: 0 auto;
+                    float: none;
+                }
+            }
+
+    }
 
 }
 

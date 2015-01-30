@@ -191,7 +191,7 @@ var Grid = (function() {
 		support = Modernizr.csstransitions,
 		// default settings
 		settings = {
-			minHeight : 200,
+			minHeight : 100,
 			speed : 350,
 			easing : 'ease'
 		};
@@ -367,7 +367,7 @@ var Grid = (function() {
 			this.$bio = $( '<p></p>' );
 			this.$details = $( '<div class="about-details"></div>' ).append( this.$name, this.$title, this.$bio);
 			this.$closePreview = $( '<span class="about-close"></span>' );
-			this.$previewInner = $( '<div class="about-expander-inner"></div>' ).append( this.$closePreview, this.$fullimage, this.$details );
+			this.$previewInner = $( '<div class="about-expander-inner"></div>' ).append( this.$closePreview, this.$details );
 			this.$previewEl = $( '<div class="about-expander"></div>' ).append( this.$previewInner );
 			// append preview element to the item
 			this.$item.append( this.getEl() );

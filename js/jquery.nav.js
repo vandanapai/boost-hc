@@ -31,17 +31,21 @@ $(document).ready(function () {
 		return false;
 	});
 
-	$('#nav-mobile').on('click', function () {
+	$('#navButton').on('click', function () {
 		$(this).toggleClass("nav-mobile-active");
 		
 
-		if ($('#nav-mobile').hasClass("nav-mobile-active")) {
-		
-			$('#main-nav').show();
+		if ($('#navButton').hasClass("nav-mobile-active")) {
+			
+			$('#mainNavLinks').addClass("mobile-active");
+			$('#mainNav').fadeIn("slow");
+			$('.nav-container').css("height", "100vh");
+
 		}
 
 		else {
-			$('#main-nav').hide();
+			$('#mainNav').hide();
+			$('.nav-container').css("height", "auto");
 		}
 
 		return false;
