@@ -35,8 +35,8 @@
 		@include mobile-and-tablet {
 			a {
 				img {
-					-webkit-transform: scale(.9);
-					transform: scale(.9);
+					@include transform(scale(0.9));
+	
 				}
 			}
 			
@@ -149,13 +149,48 @@
 
 		a {
 			display: block;
+			position: relative;
 			text-align: center;
 			font-family: $font-stack-sans-serif;
 			color: $color-link-light;
 			text-transform: uppercase;
 			text-decoration: none;
-			padding: 10px;
+			margin: 10px;
 			letter-spacing: 0.1em;
+			@include transition(0.3s);
+
+			@include desktop {
+
+				&:hover {
+					color: $color-link-dark;
+
+				}
+
+
+				&:after {
+					content: '';
+					left: 0;
+					height: 2px;
+					margin-top:2px;
+					width: 100%;
+					background: $color-link-dark;
+					position: absolute;
+					top: 100%;
+					opacity: 0;
+
+					@include transition(opacity 0.3s);
+					@include transition(0.3s);
+					@include transform(translateY(10px));
+
+				}
+
+				&:hover {
+					&:after {
+						opacity: 1;
+						@include transform(translateY(0px));
+					}
+				}
+			}
 
 			@include mobile-and-tablet {
 				display: table;
@@ -189,6 +224,18 @@
 
 .sticky-nav-links {
 	top: 12.5px;
+
+	li {
+		a {
+			&:hover {
+				color: $color-link-light;
+			}
+
+			&:after {
+				background-color: $color-link-light;
+			}
+		}
+	}
 }
 
 
