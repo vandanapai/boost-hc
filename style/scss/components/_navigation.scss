@@ -1,3 +1,148 @@
+
+
+/* test area for new navigation */ 
+
+.header-container {
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 200;
+	padding: 50px;
+
+	@include mobile-and-tablet {
+		padding: 10px;
+	}
+}
+
+.nav-logo-container {
+	float: left;
+
+	@include mobile-and-tablet {
+		width: 150px;
+	}
+
+
+	.nav-logo-resize-container {
+
+		@include mobile-and-tablet {
+			a {
+				img {
+					-webkit-transform: scale(.9);
+					transform: scale(.9);
+				}
+			}
+			
+		}
+	}
+
+
+}
+
+.mobile-menu-button {
+	display: none;
+	margin: 0;
+	position: absolute;
+	right: 15px;
+	top: 15px;
+	color: $color-link-light;
+	text-decoration: none;
+	font-size: 2em;
+
+	@include mobile-and-tablet {
+		display: table;
+	}
+}
+
+.main-nav-links-container {
+	@include mobile-and-tablet {
+		max-height: 0;
+		overflow: hidden;
+		transition: all 0.5s ease;
+	}
+}
+
+.main-nav-links {
+	list-style: none;
+	float: right;
+
+	@include mobile-and-tablet {
+		float: none;
+		text-align: center;
+
+	}
+	
+	li {
+		display: inline;
+		float: left;
+
+		@include mobile-and-tablet {
+			float: none;
+			position: relative;
+			margin: 0;
+			width: 100%;
+		}
+
+		a {
+			display: block;
+			text-align: center;
+			font-family: $font-stack-sans-serif;
+			color: $color-link-light;
+			text-transform: uppercase;
+			text-decoration: none;
+			padding: 10px;
+
+
+			@include mobile-and-tablet {
+				display: table;
+				padding: 50px;
+				width: 100%;
+				margin: 0;
+				font-size: 1.5em;
+			}
+		}
+	}
+}
+
+.active-mobile-menu {
+	max-height: 100vh !important;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 header {
 	position: fixed;
 	width: 100%;
@@ -6,7 +151,7 @@ header {
 	z-index: 200;
 	padding: 2em;
 
-	&.nav-container {
+	&.header-container {
 			transition: all 400ms ease-in-out;
 	}
 
@@ -119,13 +264,15 @@ button {
 	}
 }
 
+/* NAVIGATION STYLING ON SCROLL */
+
 .show-nav-bg, .jobs-nav {
 	background-color: rgba(237, 130, 34, .9);
 	padding: 1em;
 	box-shadow: 0 0px 15px rgba(0, 0, 0, 0.5);
 	@include transition(all 2s ease-in-out);
 
-	.nav-img-wrapper {
+	.nav-logo-wrapper {
 		width: 150px;
 		img {
 			-webkit-transform: scale(.9);
@@ -224,7 +371,7 @@ nav {
 
 
 
-.nav-mobile-active {
+.nav-menu-open {
 	
 	span{
 		background-color: transparent !important;
@@ -279,7 +426,7 @@ nav {
 	header {
 		padding: 1em;
 
-		.nav-img-wrapper {
+		.nav-logo-wrapper {
 			width: 150px;
 		}
 
@@ -287,6 +434,8 @@ nav {
 
 			display: none;
 			.nav-mobile-active-menu {
+
+
 				ul {
 					margin-top:100px;
 					float: none;
@@ -314,3 +463,5 @@ nav {
 		}
 	}
 }
+
+

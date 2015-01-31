@@ -31,27 +31,35 @@ $(document).ready(function () {
 		return false;
 	});
 
-	$('#navButton').on('click', function () {
-		$(this).toggleClass("nav-mobile-active");
-		
+	if ($(window).width() < 1024){
 
-		if ($('#navButton').hasClass("nav-mobile-active")) {
+		$('#navButton').on('click', function () {
+			$(this).toggleClass("nav-menu-open");
+			$('#mainNavLinks').toggleClass("mobile-active");
 			
-			$('#mainNavLinks').addClass("mobile-active");
-			$('#mainNav').fadeIn("slow");
-			$('.nav-container').css("height", "100vh");
+				if ($('#navButton').hasClass("nav-menu-open")) {
+					
+					// $('#mainNavLinks').addClass("mobile-active");
+					$('#mainNav').fadeIn("slow");
+					$('.header-container').css("height", "100vh");
 
-		}
+				}
 
-		else {
-			$('#mainNav').hide();
-			$('.nav-container').css("height", "auto");
-		}
+				else {
+					$('#mainNavLinks').removeClass("mobile-active");
+					$('#mainNav').hide();
+					$('.header-container').css("height", "auto");
+				}
+			});
 
+
+		};
+
+	$('#mobileMenuButton').on('click', function () {
+		$('.main-nav-links-container').toggleClass('active-mobile-menu');
 		return false;
-
-		// return false;
-	})
+	});
+	
 
 
 

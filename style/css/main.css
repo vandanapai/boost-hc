@@ -902,6 +902,82 @@ img.centered {
   .hide {
     display: none; } }
 
+/* test area for new navigation */
+.header-container {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 200;
+  padding: 50px; }
+  @media (min-width: 0px) and (max-width: 1023px) {
+    .header-container {
+      padding: 10px; } }
+
+.nav-logo-container {
+  float: left; }
+  @media (min-width: 0px) and (max-width: 1023px) {
+    .nav-logo-container {
+      width: 150px; } }
+  @media (min-width: 0px) and (max-width: 1023px) {
+    .nav-logo-container .nav-logo-resize-container a img {
+      -webkit-transform: scale(0.9);
+      transform: scale(0.9); } }
+
+.mobile-menu-button {
+  display: none;
+  margin: 0;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 2em; }
+  @media (min-width: 0px) and (max-width: 1023px) {
+    .mobile-menu-button {
+      display: table; } }
+
+@media (min-width: 0px) and (max-width: 1023px) {
+  .main-nav-links-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease; } }
+
+.main-nav-links {
+  list-style: none;
+  float: right; }
+  @media (min-width: 0px) and (max-width: 1023px) {
+    .main-nav-links {
+      float: none;
+      text-align: center; } }
+  .main-nav-links li {
+    display: inline;
+    float: left; }
+    @media (min-width: 0px) and (max-width: 1023px) {
+      .main-nav-links li {
+        float: none;
+        position: relative;
+        margin: 0;
+        width: 100%; } }
+    .main-nav-links li a {
+      display: block;
+      text-align: center;
+      font-family: "Lato", Helvetica, Tahoma, Verdana, sans-serif;
+      color: #ffffff;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 10px; }
+      @media (min-width: 0px) and (max-width: 1023px) {
+        .main-nav-links li a {
+          display: table;
+          padding: 50px;
+          width: 100%;
+          margin: 0;
+          font-size: 1.5em; } }
+
+.active-mobile-menu {
+  max-height: 100vh !important; }
+
 header {
   position: fixed;
   width: 100%;
@@ -909,7 +985,7 @@ header {
   top: 0;
   z-index: 200;
   padding: 2em; }
-  header.nav-container {
+  header.header-container {
     transition: all 400ms ease-in-out; }
   header img {
     float: left;
@@ -996,6 +1072,7 @@ button {
       background-color: transparent;
       color: #ed8222; }
 
+/* NAVIGATION STYLING ON SCROLL */
 .show-nav-bg, .jobs-nav {
   background-color: rgba(237, 130, 34, 0.9);
   padding: 1em;
@@ -1005,9 +1082,9 @@ button {
   -ms-transition: all 2s ease-in-out;
   -o-transition: all 2s ease-in-out;
   transition: all 2s ease-in-out; }
-  .show-nav-bg .nav-img-wrapper, .jobs-nav .nav-img-wrapper {
+  .show-nav-bg .nav-logo-wrapper, .jobs-nav .nav-logo-wrapper {
     width: 150px; }
-    .show-nav-bg .nav-img-wrapper img, .jobs-nav .nav-img-wrapper img {
+    .show-nav-bg .nav-logo-wrapper img, .jobs-nav .nav-logo-wrapper img {
       -webkit-transform: scale(0.9);
       transform: scale(0.9); }
   .show-nav-bg ul, .jobs-nav ul {
@@ -1073,13 +1150,13 @@ nav.sub-nav ul {
       top: 30px;
       right: 20px; } }
 
-.nav-mobile-active span, .nav-mobile-active #navButton span:before, #navButton .nav-mobile-active span:before, .nav-mobile-active #navButton span:after, #navButton .nav-mobile-active span:after {
+.nav-menu-open span, .nav-menu-open #navButton span:before, #navButton .nav-menu-open span:before, .nav-menu-open #navButton span:after, #navButton .nav-menu-open span:after {
   background-color: transparent !important; }
-  .nav-mobile-active span:before, .nav-mobile-active #navButton span:before, #navButton .nav-mobile-active span:before {
+  .nav-menu-open span:before, .nav-menu-open #navButton span:before, #navButton .nav-menu-open span:before {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
     top: 0 !important; }
-  .nav-mobile-active span:after, .nav-mobile-active #navButton span:after, #navButton .nav-mobile-active span:after {
+  .nav-menu-open span:after, .nav-menu-open #navButton span:after, #navButton .nav-menu-open span:after {
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
     top: 0 !important; }
@@ -1109,7 +1186,7 @@ nav.sub-nav ul {
 @media (min-width: 0px) and (max-width: 1023px) {
   header {
     padding: 1em; }
-    header .nav-img-wrapper {
+    header .nav-logo-wrapper {
       width: 150px; }
     header nav {
       display: none; }
