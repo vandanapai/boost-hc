@@ -1355,11 +1355,11 @@ img.centered {
       top: 0 !important;
       background-color: #ffffff !important; }
     .mobile-button.active span:after {
-      -webkit-transform: rotate(45deg);
-      -moz-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      -o-transform: rotate(45deg);
-      transform: rotate(45deg);
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
       top: 0 !important;
       background-color: #ffffff !important; }
   @media (min-width: 0px) and (max-width: 1023px) {

@@ -116,7 +116,7 @@
 			}
 
 			&:after {
-				@include transform(rotate(45deg));
+				@include transform(rotate(-45deg));
 				top: 0 !important;
 				background-color: #ffffff !important;
 			}
