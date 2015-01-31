@@ -922,14 +922,15 @@ img.centered {
   transition: all 0.5s ease; }
   @media (min-width: 0px) and (max-width: 1023px) {
     .header-container {
-      padding: 10px;
+      padding: 0;
       background-color: rgba(237, 130, 34, 0.9); } }
   .header-container .sticky .main-nav-links {
     top: 10px; }
   .header-container.jobs-nav {
     background-color: rgba(237, 130, 34, 0.9);
-    height: 80px;
-    padding: 10px; }
+    padding: 0; }
+  .header-container.active-mobile-header {
+    height: 100vh; }
 
 .nav-logo-container {
   float: left; }
@@ -960,8 +961,7 @@ img.centered {
   color: white;
   font-size: 1.5em;
   text-decoration: none;
-  top: 15px;
-  right: 45px;
+  right: 20px;
   line-height: 0; }
   .mobile-button span, .mobile-button span:before, .mobile-button span:after {
     cursor: pointer;
@@ -995,7 +995,8 @@ img.centered {
       background-color: #ffffff !important; }
   @media (min-width: 0px) and (max-width: 1023px) {
     .mobile-button {
-      display: table; } }
+      display: table;
+      padding: 30px; } }
 
 .main-nav-links-container {
   position: relative; }
@@ -1008,7 +1009,9 @@ img.centered {
       -moz-transition: all 0.5s ease;
       -ms-transition: all 0.5s ease;
       -o-transition: all 0.5s ease;
-      transition: all 0.5s ease; } }
+      transition: all 0.5s ease; }
+      .main-nav-links-container ul {
+        vertical-align: middle; } }
 
 .main-nav-links {
   list-style: none; }
@@ -1024,15 +1027,20 @@ img.centered {
       float: none;
       text-align: center; } }
   .main-nav-links li {
-    display: inline;
-    float: left; }
+    display: inline; }
+    @media (min-width: 1024px) {
+      .main-nav-links li {
+        float: left; } }
     @media (min-width: 0px) and (max-width: 1023px) {
       .main-nav-links li {
         float: none;
         position: relative;
         margin: 0;
         width: 100%;
-        margin: 30px; } }
+        margin: 30px; }
+        .main-nav-links li a:hover, .main-nav-links li a:active, .main-nav-links li a:focus {
+          background-color: #ffffff;
+          color: #ed8222; } }
     .main-nav-links li a {
       display: block;
       position: relative;
@@ -1101,7 +1109,7 @@ img.centered {
 /* scrolled menu styling */
 .sticky {
   background-color: rgba(237, 130, 34, 0.9);
-  padding: 10px; }
+  padding: 0; }
 
 .sticky-logo {
   width: 150px;
@@ -1347,6 +1355,8 @@ nav.sub-nav ul {
     display: none; }
   #map-canvas .gmnoprint div {
     background: none !important; }
+  #map-canvas .pac-container:after {
+    content: none !important; }
 
 form *:focus {
   outline: none; }

@@ -10,7 +10,7 @@
 	@include transition(all 0.5s ease);
 
 	@include mobile-and-tablet {
-		padding: 10px;
+		padding: 0;
 		background-color: rgba(237, 130, 34, .9);
 	}
 
@@ -22,8 +22,11 @@
 
 	&.jobs-nav {
 		background-color: rgba(237, 130, 34, .9);
-		height: 80px;
-		padding: 10px;
+		padding: 0;
+	}
+
+	&.active-mobile-header {
+		height: 100vh;
 	}
 }
 
@@ -75,8 +78,7 @@
   color:white;
   font-size: 1.5em;
   text-decoration:none;
-  top:15px;
-  right:45px;
+  right:20px;
   line-height:0;
 
 	span {
@@ -125,6 +127,7 @@
 
 	@include mobile-and-tablet {
 		display: table;
+		padding: 30px;
 	}
 }
 
@@ -135,9 +138,16 @@
 		max-height: 0;
 		width: 100%;
 		overflow: hidden;
+		ul {
+				vertical-align: middle;
+		}
+	
 		@include transition(all 0.5s ease);
 
+
 	}
+
+
 
 
 }
@@ -164,7 +174,10 @@
 	
 	li {
 		display: inline;
-		float: left;
+
+		@include desktop {
+			float: left;
+		}
 
 		@include mobile-and-tablet {
 			float: none;
@@ -172,6 +185,13 @@
 			margin: 0;
 			width: 100%;
 			margin: 30px;
+
+			a {
+				&:hover, &:active, &:focus {
+					background-color: $color-container-light;
+					color: $color-link-dark;
+				}
+			}
 
 		}
 
@@ -249,7 +269,7 @@
 
 .sticky {
 	background-color: rgba(237, 130, 34, 0.9);
-	padding: 10px;
+	padding: 0;
 }
 
 .sticky-logo {
