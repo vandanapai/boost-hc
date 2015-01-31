@@ -18,6 +18,7 @@ $(document).ready(function () {
 
 	$('.mobile-button').on('click', function () {
 		$(this).toggleClass('active');
+		$('.header-container').toggleClass('active-mobile-header');
 		$('.main-nav-links-container').toggleClass('active-mobile-menu');
 		return false;
 		

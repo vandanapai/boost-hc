@@ -55,6 +55,7 @@
 	}
 }
 
+
 .dark-container {
 	@extend .container;
 	background-color: $color-container-dark;
@@ -68,3 +69,15 @@
 	@extend .container;
 	background-color: $color-container-darkest;
 }
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  
+  50% {
+    opacity: 1;
+  }
+}
+

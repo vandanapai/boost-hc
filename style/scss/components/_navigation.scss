@@ -19,18 +19,39 @@
 			top: 10px;
 		}
 	}
+
+	&.jobs-nav {
+		background-color: rgba(237, 130, 34, .9);
+		height: 80px;
+		padding: 10px;
+	}
 }
+
 
 
 .nav-logo-container {
 	float: left;
+
+	&.jobs-nav {
+		width: 150px;
+	}
 
 	@include mobile-and-tablet {
 		width: 150px;
 	}
 
 
+
 	.nav-logo-resize-container {
+
+		&.jobs-nav {
+						a {
+				img {
+					@include transform(scale(0.9));
+	
+				}
+			}
+		}
 
 		@include mobile-and-tablet {
 			a {
@@ -123,6 +144,11 @@
 
 .main-nav-links {
 	list-style: none;
+
+	&.jobs-nav {
+		@extend .sticky-nav-links;
+		top: 12.5px;
+	}
 	
 	@include desktop {
 		position: absolute;
@@ -145,6 +171,8 @@
 			position: relative;
 			margin: 0;
 			width: 100%;
+			margin: 30px;
+
 		}
 
 		a {
@@ -158,6 +186,10 @@
 			margin: 10px;
 			letter-spacing: 0.1em;
 			@include transition(0.3s);
+			
+			@include mobile-and-tablet {
+				padding: 30px;
+			}
 
 			@include desktop {
 
@@ -204,6 +236,12 @@
 .active-mobile-menu {
 	max-height: 100vh !important;
 	width: 100%;
+
+	ul {
+		li {
+			padding: 50px;
+		}
+	}
 
 }
 

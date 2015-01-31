@@ -2,7 +2,8 @@
 body {
   background-color: none;
   margin: 0 auto;
-  display: none; }
+  display: none;
+  font-size: 16px; }
 
 .wrapper,
 .row {
@@ -496,6 +497,12 @@ Copyright (c) 2014 Daniel Eden
 .darkest-container {
   background-color: #303030; }
 
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.5; }
+  50% {
+    opacity: 1; } }
 .wrapper,
 .row {
   *zoom: 1; }
@@ -880,7 +887,6 @@ footer {
   height: 100%; }
 
 img.stats {
-  width: 100px;
   height: 100px !important;
   margin-bottom: 1em; }
 img.nudge-up {
@@ -920,12 +926,24 @@ img.centered {
       background-color: rgba(237, 130, 34, 0.9); } }
   .header-container .sticky .main-nav-links {
     top: 10px; }
+  .header-container.jobs-nav {
+    background-color: rgba(237, 130, 34, 0.9);
+    height: 80px;
+    padding: 10px; }
 
 .nav-logo-container {
   float: left; }
+  .nav-logo-container.jobs-nav {
+    width: 150px; }
   @media (min-width: 0px) and (max-width: 1023px) {
     .nav-logo-container {
       width: 150px; } }
+  .nav-logo-container .nav-logo-resize-container.jobs-nav a img {
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9); }
   @media (min-width: 0px) and (max-width: 1023px) {
     .nav-logo-container .nav-logo-resize-container a img {
       -webkit-transform: scale(0.9);
@@ -994,6 +1012,8 @@ img.centered {
 
 .main-nav-links {
   list-style: none; }
+  .main-nav-links.jobs-nav {
+    top: 12.5px; }
   @media (min-width: 1024px) {
     .main-nav-links {
       position: absolute;
@@ -1011,7 +1031,8 @@ img.centered {
         float: none;
         position: relative;
         margin: 0;
-        width: 100%; } }
+        width: 100%;
+        margin: 30px; } }
     .main-nav-links li a {
       display: block;
       position: relative;
@@ -1027,6 +1048,9 @@ img.centered {
       -ms-transition: 0.3s;
       -o-transition: 0.3s;
       transition: 0.3s; }
+      @media (min-width: 0px) and (max-width: 1023px) {
+        .main-nav-links li a {
+          padding: 30px; } }
       @media (min-width: 1024px) {
         .main-nav-links li a:hover {
           color: #ed8222; }
@@ -1071,6 +1095,8 @@ img.centered {
 .active-mobile-menu {
   max-height: 100vh !important;
   width: 100%; }
+  .active-mobile-menu ul li {
+    padding: 50px; }
 
 /* scrolled menu styling */
 .sticky {
@@ -1087,11 +1113,11 @@ img.centered {
   -webkit-transform: scale(0.9);
   transform: scale(0.9); }
 
-.sticky-nav-links {
+.sticky-nav-links, .main-nav-links.jobs-nav {
   top: 12.5px; }
-  .sticky-nav-links li a:hover {
+  .sticky-nav-links li a:hover, .main-nav-links.jobs-nav li a:hover {
     color: #ffffff; }
-  .sticky-nav-links li a:after {
+  .sticky-nav-links li a:after, .main-nav-links.jobs-nav li a:after {
     background-color: #ffffff; }
 
 /* BIG NAV BUTTONS */
