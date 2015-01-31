@@ -67,9 +67,7 @@ img {
     &.nudge-up {
         transition: all .4s ease-in-out;
         &:hover {
-            -ms-transform: translate(0px,-15px); /* IE 9 */
-            -webkit-transform: translate(0px,-15px); /* Chrome, Safari, Opera */
-            transform: translate(0px,-15px); /* Standard syntax */
+            @include transform(translate(0px, -15px));
         }
     }
     &.centered {

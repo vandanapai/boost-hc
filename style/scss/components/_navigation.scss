@@ -110,15 +110,13 @@
 
 		
 			&:before {
-				-webkit-transform: rotate(45deg);
-				transform: rotate(45deg);
+				@include transform(rotate(45deg));
 				top: 0 !important;
 				background-color: #ffffff !important;
 			}
 
 			&:after {
-				-webkit-transform: rotate(-45deg);
-				transform: rotate(-45deg);
+				@include transform(rotate(45deg));
 				top: 0 !important;
 				background-color: #ffffff !important;
 			}
@@ -275,8 +273,7 @@
 .sticky-logo {
 	width: 150px;
 	@include transition (all 0.5s ease-in-out);
-	-webkit-transform: scale(0.9);
-	transform: scale(0.9);
+	@include transform(scale(0.9));
 
 }
 
