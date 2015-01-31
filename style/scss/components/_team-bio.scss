@@ -5,15 +5,6 @@
     text-align: center;
     width: 100%;
     
-    // &:hover > li {
-    //     opacity: 0.4;
-    //     @include transition (all 0.5s ease-in-out);
-
-    // }
-
-    // &:hover > li:hover {
-    //     opacity: 1.0;
-    // }
 	
 	li {
     display: inline-block;
@@ -22,82 +13,25 @@
     height: 300px;
     overflow: hidden;
 
-    // &.about-expanded {
-    //     opacity: 1.0;
-    // }
 
 	    figure, a {
 	    	img {
 	    		width: 300px;
 	    		max-height: 300px;
 
-					// @include desktop {
-					// 	@include transition (all 0.5s ease-in-out);
-					// 	-webkit-transform: scale(1.1);
-					// 	transform: scale(1.1);
-					// }
-					
+			     @include transition (all 0.5s ease-in-out);
+		
+				@include desktop {
+
+
+                 &:hover {
+                     
+                         @include transform(scale(1.1));
+                     }	
 				}
+            }
 
-	    	
-
-			// &.scale-overlay-effect {
-
-			// 	figcaption {
-			// 		position: absolute;
-			// 		bottom: 0;
-			// 		padding: 1em;
-			// 		@include transition (all 0.5s ease-in-out);
-			// 		-webkit-transform: translate3d(0,60px,0);
-			// 		transform: translate3d(0,60px,0);
-
-			// 		@include mobile-and-tablet {
-			// 			transition: none;
-			// 			transform: none;
-			// 			position: relative;
-			// 			padding: 0;
-			// 		}
-
-
-			// 		h4 {
-			// 			color: $color-text-light;
-			// 			padding: 0;
-			// 			font-size: 1.5em;
-
-			// 			@include mobile {
-			// 				font-size: 1em;
-			// 			}
-			// 		}
-
-			// 		h5 {
-			// 			color: $color-heading-lightest;
-			// 			font-weight: 300;
-			// 			padding-bottom: 0;
-
-			// 			@include mobile-and-tablet {
-			// 				color: $color-heading-dark;
-			// 			}
-			// 		}
-
-			// 	}
-
-			// 	@include desktop {
-			// 		background-color: black;
-
-			// 		&:hover {
-			// 			img {
-			// 				opacity: 0.5;
-			// 				-webkit-transform: scale(1);
-			// 				transform: scale(1);
-			// 			}
-
-			// 			figcaption {
-			// 				-webkit-transform: translate3d(0,0,0);
-			// 				transform: translate3d(0,0,0);
-			// 			}
-			// 		}
-			// 	}
-			// }	   	 	
+	    		 	
 
     	}
 
@@ -111,6 +45,9 @@
     outline: none;
     display: block;
     position: relative;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
 }
 
 
@@ -129,7 +66,7 @@
 
 .about-expander-inner {
     opacity: 1.0 !important;
-    padding: 50px;
+    padding: 25px;
     height: 100%;
     margin: 0 auto;
     // position: relative;
@@ -179,13 +116,11 @@
 }
 
 .about-details {
-    // width: 50%;
-    // margin: 0 auto;
-    // float: left;
+
     height: 100%;
     overflow: hidden;
     display: inline-block;
-    // position: relative;
+
     
      h4 {
     font-weight: 400;
@@ -248,7 +183,7 @@
 
     .about-expander h4 { font-size: 1.5em; }
     .about-expander h5 { font-size: 1em; }
-    .about-expander p { font-size: 0.9em; }
+    .about-expander p { font-size: 0.8em; }
 
 }
 
