@@ -63,6 +63,9 @@ img {
 
     .column-3 {
         width: 25%;
+        &.sub-nav-full {
+            width: 100%;
+        }
     }
 
     .column-4 {

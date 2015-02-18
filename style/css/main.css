@@ -850,7 +850,7 @@ Copyright (c) 2014 Daniel Eden
     padding: 2em; }
     @media (min-width: 0px) and (max-width: 767px) {
       .light-container.jobs-page {
-        padding: 0; } }
+        padding: 1em; } }
 
 .dark-container {
   background-color: #003354; }
@@ -994,6 +994,8 @@ img {
 @media (min-width: 768px) and (max-width: 1023px) {
   .column-3 {
     width: 25%; }
+    .column-3.sub-nav-full {
+      width: 100%; }
 
   .column-4.avatar {
     width: 50%; } }
@@ -1413,7 +1415,9 @@ a, img {
         margin: 30px; }
         .main-nav-links li a:hover, .main-nav-links li a:active, .main-nav-links li a:focus {
           background-color: #ffffff;
-          color: #ed8222; } }
+          color: #ed8222;
+          outline: 0;
+          border: 0 none; } }
     .main-nav-links li a {
       display: block;
       position: relative;
@@ -1553,8 +1557,11 @@ nav.sub-nav ul {
       -ms-transition: all 0.3s ease-in-out;
       -o-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out; }
-      nav.sub-nav ul li a:hover, nav.sub-nav ul li a:active, nav.sub-nav ul li a:focus {
+      nav.sub-nav ul li a:hover, nav.sub-nav ul li a:active {
         color: #91bed4; }
+@media (min-width: 0px) and (max-width: 1023px) {
+  nav.sub-nav ul li {
+    text-align: center; } }
 
 .about-grid {
   list-style: none;

@@ -191,6 +191,8 @@ a, img {
 				&:hover, &:active, &:focus {
 					background-color: $color-container-light;
 					color: $color-link-dark;
+					outline: 0;
+    				border:0 none;
 				}
 			}
 
@@ -356,11 +358,20 @@ nav {
 					color: $color-link-subnav-dark;
 					@include transition(all .3s ease-in-out);
 
-					&:hover, &:active, &:focus {
+					&:hover, &:active {
 						color: $color-link-subnav-light;
 					}
 				}
 			}
 		}
+
+		@include mobile-and-tablet {
+			ul {
+				li {
+					text-align: center;
+				}
+			}
+		}
+
 	}
 }
