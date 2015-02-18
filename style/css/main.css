@@ -1271,6 +1271,10 @@ img.centered {
   .hide {
     display: none; } }
 
+a, img {
+  border: none;
+  outline: none; }
+
 .header-container {
   position: fixed;
   width: 100%;
