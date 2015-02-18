@@ -103,7 +103,7 @@
 }
 
 .about-close::after {
-    @include transform(rotate(45deg));
+    @include transform(rotate(-45deg));
 }
 
 .about-close:hover::before,
