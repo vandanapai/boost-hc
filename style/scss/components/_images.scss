@@ -5,31 +5,54 @@
 
 .hero-boat {
 	background-image: url('../../img/hero-boat.jpg');
+
+	@include mobile {
+		background-image: url('../../img/hero-boat-small.jpg');
+	}
 }
 
 .hero-bird-flying {
 	background-image: url('../../img/hero-bird-flying.jpg');
+
+	@include mobile {
+		background-image: url('../../img/hero-bird-flying-small.jpg');
+	}
 }
 
 .hero-coast {
 	background-image: url('../../img/hero-coast.jpg');
+
+	@include mobile {
+		background-image: url('../../img/hero-coast-small.jpg');
+	}
 }
 
 .hero-waves {
 	background-image: url('../../img/hero-waves.jpeg');
+
+	@include mobile {
+		background-image: url('../../img/hero-waves-small.jpeg');
+	}
 }
 
 .hero-team {
     background-image: url('../../img/team.jpg');
+
+   	@include mobile {
+		background-image: url('../../img/team-small.jpg');
+	}
+
 }
 
 .hero-hands {
     background-image: url('../../img/hero-hands.jpg');
+
+	@include mobile {
+		background-image: url('../../img/hero-hands-small.jpg');
+	}
 }
 
-.hero-biker {
-    background-image: url('../../img/hero-biker.jpg');
-}
+
 
 .title-gradient {
     background-image: -webkit-linear-gradient(top, rgba(35,31,32,0) 0%, #000 100%);
