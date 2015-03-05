@@ -234,16 +234,17 @@ Copyright (c) 2014 Daniel Eden
 }
 
 #gear1{
-  transform-origin: 50% 50%;
-  -webkit-transform-origin: 50% 50%;
-  -moz-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  -o-transform-origin: 50% 50%;
-  -webkit-animation: rotate 3s infinite linear;
-  -moz-animation: rotate 3s infinite linear;
-  -ms-animation: rotate 3s infinite linear;
-  -o-animation: rotate 3s infinite linear;
-  animation: rotate 3s infinite linear;
+  transform-origin: 50% 50% 0px;
+  -webkit-transform-origin: 50% 50% 0px;
+  -moz-transform-origin: 50% 50% 0px;
+  -ms-transform-origin: 50% 50% 0px;
+  -o-transform-origin: 50% 50% 0px;
+  -webkit-animation: rotate 3s linear infinite;
+  -moz-animation: rotate 3s linear infinite;
+  -ms-animation: rotate 3s linear infinite;
+  -o-animation: rotate 3s linear infinite;
+  animation: rotate 3s linear infinite;
+
 }
 
 @-webkit-keyframes rotate {
@@ -252,11 +253,11 @@ Copyright (c) 2014 Daniel Eden
   }
 }
 
-@-moz-keyframes rotate {
-  0% {
-    @include transform(rotate(360deg));
-  }
-}
+// @-moz-keyframes rotate {
+//   0% {
+//     @include transform(rotate(360deg));
+//   }
+// }
 
 @-o-keyframes rotate {
   0% {
@@ -301,7 +302,7 @@ Copyright (c) 2014 Daniel Eden
   }
 }
 
-@keyframes rotate {
+@keyframes rotateClockwise {
   0% {
     @include transform(rotate(-360deg));
   }

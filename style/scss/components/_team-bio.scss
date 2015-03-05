@@ -53,7 +53,7 @@
 
 .about-expander {
     position: absolute;
-    background: $color-container-light;
+    background: rgb(239, 239, 239);
     top: auto;
     width: 100%;
     left: 0;
@@ -69,7 +69,7 @@
     padding: 25px;
     height: 100%;
     margin: 0 auto;
-    // position: relative;
+   
 
     @include desktop {
         width: 960px;
@@ -84,8 +84,8 @@
 
 .about-close {
     position: absolute;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height:30px;
     top: 20px;
     right: 20px;
     cursor: pointer;
